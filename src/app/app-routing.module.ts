@@ -12,6 +12,11 @@ const routes: Routes = [
     redirectTo: '/auth/login', //Redirecciona a la ruta login
     pathMatch: 'full', //Solo se redirecciona si la ruta es exactamente vacia
   },
+  {
+    path: 'landing',
+    loadChildren: () => import('./pages/landing/landing.module').then(m => m.LandingModule),
+  },
+
 ];
 
 @NgModule({
