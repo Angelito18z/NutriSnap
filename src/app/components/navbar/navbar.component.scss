@@ -1,0 +1,40 @@
+/* src/app/components/navbar/navbar.component.scss */
+.sticky-navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
+  }
+  
+  .navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  
+    .logo {
+      height: 40px;
+      width: auto;
+    }
+  
+    .company-name {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+  }
+  
+  .spacer {
+    flex: 1 1 auto;
+  }
+  
+  nav {
+    display: flex;
+    gap: 8px;
+  }
+  
+  .active {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+  }
