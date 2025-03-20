@@ -1,23 +1,41 @@
 <div class="container">
     <div class="form_area">
-        <p class="title">SIGN UP</p>
-        <form action="">
-            <div class="form_group">
-                <label class="sub_title" for="name">Name</label>
-                <input placeholder="Enter your full name" class="form_style" type="text">
-            </div>
-            <div class="form_group">
-                <label class="sub_title" for="email">Email</label>
-                <input placeholder="Enter your email" id="email" class="form_style" type="email">
-            </div>
-            <div class="form_group">
-                <label class="sub_title" for="password">Password</label>
-                <input placeholder="Enter your password" id="password" class="form_style" type="password">
-            </div>
-            <div>
-                <button class="btn">SIGN UP</button>
-                <p>Have an Account? <a class="link" href="">Login Here!</a></p><a class="link" href="">
-            </a></div><a class="link" href="">
+        <p class="title">{{ isLogin ? 'INICIAR SESIÓN' : 'REGISTRARSE' }}</p>
         
-    </a></form></div><a class="link" href="">
-</a></div>
+            <!-- Campo de nombre solo para registro -->
+            <div class="form_group" *ngIf="!isLogin">
+                <label class="sub_title" for="name">Nombre</label>
+                <input placeholder="Ingresa tu nombre completo" class="form_style" type="text" id="name">
+            </div>
+
+            <!-- Campo de email -->
+            <div class="form_group">
+                <label class="sub_title" for="email">Correo electrónico</label>
+                <input placeholder="Ingresa tu correo electrónico" id="email" class="form_style" type="email">
+            </div>
+
+            <!-- Campo de contraseña -->
+            <div class="form_group">
+                <label class="sub_title" for="password">Contraseña</label>
+                <input placeholder="Ingresa tu contraseña" id="password" class="form_style" type="password">
+            </div>
+
+            <!-- Campo de confirmación de contraseña solo para registro -->
+            <div class="form_group" *ngIf="!isLogin">
+                <label class="sub_title" for="confirm-password">Confirmar contraseña</label>
+                <input placeholder="Confirma tu contraseña" id="confirm-password" class="form_style" type="password">
+            </div>
+
+            <div>
+                <!-- Botón de inicio de sesión -->
+                <button class="btn" *ngIf="isLogin" (click)="login()">INICIAR SESIÓN</button>
+                <!-- Botón de registro -->
+                <button class="btn" *ngIf="!isLogin" (click)="register()">REGISTRARSE</button>
+
+                <!-- Enlaces para cambiar entre login y register -->
+                <p *ngIf="isLogin">¿No tienes una cuenta? <a class="link" href="/auth/register">¡Regístrate aquí!</a></p>
+                <p *ngIf="!isLogin">¿Ya tienes una cuenta? <a class="link" href="/auth/login">¡Inicia sesión aquí!</a></p>
+            </div>
+
+    </div>
+</div>
