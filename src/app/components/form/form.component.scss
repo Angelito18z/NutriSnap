@@ -1,10 +1,12 @@
 .container {
   display: flex;
-  align-items: center;
   justify-content: center;
-  flex-direction: column;
-  text-align: center;
-  padding-top: 50px;
+  align-items: center;
+  height: 100vh; /* Ocupa toda la altura de la pantalla */
+  background-image: url('/assets/background/bg.png'); 
+  background-size: cover; /* Ajusta la imagen para cubrir todo el contenedor */
+  background-position: center; /* Centra la imagen */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
 }
 
 .form_area {
