@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { LandingRoutingModule } from './landing-routing.module';
 import { ComponentsModule } from '../../components/components.module';
 import { HeroeComponents } from './heroe/heroe.component';
+import { NutriDataModule } from '../../nutri-data/nutri-data.module';
 
 
 @NgModule({
@@ -13,6 +14,7 @@ import { HeroeComponents } from './heroe/heroe.component';
     CommonModule,
     LandingRoutingModule,
     ComponentsModule,
+    NutriDataModule
     
   ]
 })

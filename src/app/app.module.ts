@@ -13,9 +13,11 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatSidenavModule } from '@angular/material/sidenav';
 
+
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
@@ -26,7 +28,6 @@ import { MatSidenavModule } from '@angular/material/sidenav';
     MatCardModule,
     MatToolbarModule,
     MatSnackBarModule,
-    MatSidenavModule,
     HttpClientModule
   ],
   providers: [],
