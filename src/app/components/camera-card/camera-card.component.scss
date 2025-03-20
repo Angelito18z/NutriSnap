@@ -6,8 +6,13 @@
   padding: 20px;
   background-color: #FFE5B4; // Light peach background
   transition: flex-direction 0.3s ease;
-
-
+  .banner-title {
+    font-size: 36px; // Large font size for the title
+    font-weight: bold; // Bold text
+    color: #2E572C; // Dark green color
+    margin-bottom: 20px; // Space below the title
+    text-align: center; // Center the title
+  }
   .column {
     display: flex;
     align-items: center;
@@ -113,6 +118,14 @@
     font-weight: bold;
   }
 }
+.banner-title {
+  font-size: 36px; /* Large font size */
+  font-weight: bold; /* Bold text */
+  color: #2E572C; /* Dark green color */
+  text-align: center; /* Center the text */
+  padding: 20px 0; /* Add padding for spacing */
+  margin: 0; /* Remove default margin */
+}
 @media (max-width: 768px) {
   .three-column-banner {
     flex-direction: column; // Stack columns vertically
@@ -142,5 +155,10 @@
         font-size: 16px; // Smaller font size for values
       }
     }
+  }
+}
+@media (max-width: 768px) {
+  .banner-title {
+    font-size: 28px; /* Smaller font size for smaller screens */
   }
 }
