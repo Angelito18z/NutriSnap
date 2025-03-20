@@ -1,10 +1,70 @@
-<mat-toolbar color="primary">
-    <span>My Angular App</span>
-  </mat-toolbar>
-  
-  <mat-card>
-    <h2>Angular Material Card</h2>
-    <p>This is an example card using Angular Material.</p>
-    <button mat-raised-button color="accent">Click Me</button>
-  </mat-card>
-  
+<div class="three-column-banner">
+  <!-- First Column: Robot Image -->
+  <div class="column">
+    <img src="/assets/robot/happy robot.png" alt="Robot" class="robot-image" />
+  </div>
+
+  <!-- Second Column: Nutritional Table -->
+  <div class="column">
+    <mat-card class="nutrition-card">
+      <mat-card-header>
+        <mat-card-title>Nutritional Values</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <table mat-table [dataSource]="nutritionData" class="nutrition-table">
+          <!-- Food Column -->
+          <ng-container matColumnDef="food">
+            <th mat-header-cell *matHeaderCellDef>Food</th>
+            <td mat-cell *matCellDef="let element">{{ element.food }}</td>
+          </ng-container>
+
+          <!-- Calories Column -->
+          <ng-container matColumnDef="calories">
+            <th mat-header-cell *matHeaderCellDef>Calories</th>
+            <td mat-cell *matCellDef="let element">{{ element.calories }}</td>
+          </ng-container>
+
+          <!-- Protein Column -->
+          <ng-container matColumnDef="protein">
+            <th mat-header-cell *matHeaderCellDef>Protein (g)</th>
+            <td mat-cell *matCellDef="let element">{{ element.protein }}</td>
+          </ng-container>
+
+          <!-- Carbs Column -->
+          <ng-container matColumnDef="carbs">
+            <th mat-header-cell *matHeaderCellDef>Carbs (g)</th>
+            <td mat-cell *matCellDef="let element">{{ element.carbs }}</td>
+          </ng-container>
+
+          <!-- Fat Column -->
+          <ng-container matColumnDef="fat">
+            <th mat-header-cell *matHeaderCellDef>Fat (g)</th>
+            <td mat-cell *matCellDef="let element">{{ element.fat }}</td>
+          </ng-container>
+
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+        </table>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+  <!-- Third Column: Camera Card -->
+  <div class="column">
+    <mat-card class="camera-card">
+      <mat-card-header>
+        <mat-card-title>Scan Product</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <div class="camera-container" #cameraContainer>
+          <!-- Camera feed will go here -->
+          <p *ngIf="!isCameraActive">Click "Activate Camera" to start scanning.</p>
+          <video #cameraFeed autoplay></video>
+        </div>
+        <button mat-raised-button color="primary" (click)="activateCamera()">
+          {{ isCameraActive ? 'Deactivate Camera' : 'Activate Camera' }}
+        </button>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

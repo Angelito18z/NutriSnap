@@ -12,6 +12,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { CameraCardComponent } from './camera-card/camera-card.component';
 import { MatButtonModule } from '@angular/material/button';
 import { QuienesSomosComponent } from './quienes-somos/quienes-somos.component';
+import { MatTableModule } from '@angular/material/table';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { QuienesSomosComponent } from './quienes-somos/quienes-somos.component';
     CommonModule,
     MatToolbarModule,
     MatCardModule,
-    MatButtonModule
+    MatButtonModule,
+    MatTableModule
   ],
   exports: [
     FormComponent,
