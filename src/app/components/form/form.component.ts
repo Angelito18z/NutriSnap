@@ -20,7 +20,7 @@ export class FormComponent {
 
     // Validar que todos los campos estén completos
     if (!email || !password) {
-        this.showToast('Todos los campos son obligatorios', 'error');
+      this.showToast('Todos los campos son obligatorios', 'error');
         return;
     }
 
@@ -77,7 +77,6 @@ register() {
     this.snackBar.open(message, 'Cerrar', {
       duration: 3000,
       panelClass: [styleClass], // Aplica la clase dinámica
-      horizontalPosition: 'end',
       verticalPosition: 'bottom'
     });
   }

@@ -3,19 +3,3 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-
-/* Estilos para los snackbars */
-.success-snackbar {
-    background-color: #4caf50; /* Verde para éxito */
-    color: white;
-  }
-  
-  .error-snackbar {
-    background-color: #f44336; /* Rojo para errores */
-    color: white;
-  }
-  
-  .warning-snackbar {
-    background-color: #ff9800; /* Naranja para advertencias */
-    color: white;
-  }
