@@ -13,11 +13,9 @@ export class NavbarComponent {
   
   login(){
     this.router.navigate(['/auth/login'])
-    console.log("login");
   }
 
   register(){
-    this.router.navigate(['/auth/register'])
-    console.log("register");  
+    this.router.navigate(['/auth/register']) 
   }
 }
