@@ -1,1 +1,14 @@
-<p>navbar works!</p>
+<mat-toolbar color="primary" class="sticky-navbar">
+    <div class="navbar-brand">
+      <img src="../../../assets/logo/logo.png" alt="Company Logo" class="logo" />
+      <span class="company-name">NutriSnap</span>
+    </div>
+  
+    <!-- Right side: Navigation Links -->
+    <span class="spacer"></span>
+    <nav>
+      <a mat-button routerLink="landing" routerLinkActive="active">Home</a>
+      <a mat-button routerLink="/register" routerLinkActive="active">Register</a>
+      <a mat-button routerLink="/login" routerLinkActive="active">Log In</a>
+    </nav>
+  </mat-toolbar>
