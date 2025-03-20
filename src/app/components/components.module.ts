@@ -13,6 +13,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { QuienesSomosComponent } from './quienes-somos/quienes-somos.component';
 import { MatTableModule } from '@angular/material/table';
 import { LoadingBarComponent } from './loading-bar/loading-bar.component';
+import { SocialMediaComponent } from './social-media/social-media.component';
 import { MaterialModule } from '../material/material.module';
 
 @NgModule({
@@ -25,7 +26,8 @@ import { MaterialModule } from '../material/material.module';
     ReviewCardComponent,
     CameraCardComponent,
     QuienesSomosComponent,
-    LoadingBarComponent
+    LoadingBarComponent,
+    SocialMediaComponent
   ],
   imports: [
     CommonModule,
