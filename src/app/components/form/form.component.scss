@@ -4,10 +4,11 @@
   align-items: center;
   height: 100vh; /* Ocupa toda la altura de la pantalla */
   background-image: url('/assets/background/bg.png'); 
-  background-size: cover; /* Ajusta la imagen para cubrir todo el contenedor */
+  background-size: auto; /* Usa el tamaño original de la imagen */
   background-position: center; /* Centra la imagen */
-  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  background-repeat: repeat; /* Repite la imagen */
 }
+
 
 .form_area {
   display: flex;
