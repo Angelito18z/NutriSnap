@@ -7,7 +7,7 @@ import { NutriDataComponent } from './nutri-data.component';
 
 @NgModule({
   declarations: [
-    NutriDataComponent
+    NutriDataComponent,
   ],
   imports: [
     CommonModule,

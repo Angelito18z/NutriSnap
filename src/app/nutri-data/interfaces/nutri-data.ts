@@ -50,4 +50,5 @@ export interface Trabajador {
     especialidad: string;
     horario: string;
     pacientes_asignados: number[];
+    alt_img?: string; 
 }
