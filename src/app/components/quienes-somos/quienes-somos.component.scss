@@ -45,7 +45,7 @@
     position: absolute; // Position the image absolutely within the container
     top: 70%; // Center vertically
     left: 51%; // Center horizontally
-    transform: translate(-50%, -50%) scale(1.5); // Offset to truly center the image
+    transform: translate(-50%, -50%) scale(1); // Offset to truly center the image
     z-index: 10; // Ensure the image stays on top
     max-width: 700px; // Increased size of the middle image (2x)
     height: auto; // Maintain aspect ratio
