@@ -12,7 +12,7 @@ export interface Usuario {
     nombre: string;
     email: string;
     rol: string;
-    contraseña: string;
+    contrasena: string;
     fecha_registro: string;
     ultimo_acceso: string;
 }

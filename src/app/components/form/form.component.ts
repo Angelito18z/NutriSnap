@@ -31,7 +31,7 @@ export class FormComponent {
     // Validar que el correo y contraseña coincidan
     if (email === savedEmail && password === savedPassword) {
         this.showToast('Inicio de sesión exitoso', 'success');
-        this.router.navigate(['/landing']); // Redirigir a la página de landing
+        this.router.navigate(['/admin']); // Redirigir a la página de landing
     } else {
         this.showToast('Correo o contraseña incorrectos', 'error');
     }
@@ -79,5 +79,9 @@ register() {
       panelClass: [styleClass], // Aplica la clase dinámica
       verticalPosition: 'bottom'
     });
+  }
+
+  goBack(){
+    this.router.navigate(['/landing']);
   }
 }

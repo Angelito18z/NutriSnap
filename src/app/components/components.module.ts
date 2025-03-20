@@ -13,6 +13,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { QuienesSomosComponent } from './quienes-somos/quienes-somos.component';
 import { MatTableModule } from '@angular/material/table';
 import { LoadingBarComponent } from './loading-bar/loading-bar.component';
+import { MaterialModule } from '../material/material.module';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { LoadingBarComponent } from './loading-bar/loading-bar.component';
     MatCardModule,
     MatButtonModule,
     MatTableModule,
+    MaterialModule
   ],
   exports: [
     FormComponent,
