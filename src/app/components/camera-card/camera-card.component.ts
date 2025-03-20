@@ -7,12 +7,13 @@ import { Component, ViewChild, ElementRef } from '@angular/core';
   styleUrl: './camera-card.component.scss'
 })
 export class CameraCardComponent {
+  nutritionData = {
+    calories: 250, // Example value
+    protein: 20,   // Example value
+    carbs: 30,     // Example value
+    fat: 10,       // Example value
+  };
   // Nutritional Table Data
-  nutritionData = [
-    { food: 'Apple', calories: 95, protein: 0.5, carbs: 25, fat: 0.3 },
-    { food: 'Banana', calories: 105, protein: 1.3, carbs: 27, fat: 0.4 },
-    { food: 'Chicken Breast', calories: 165, protein: 31, carbs: 0, fat: 3.6 },
-  ];
   displayedColumns: string[] = ['food', 'calories', 'protein', 'carbs', 'fat'];
 
   // Camera Functionality

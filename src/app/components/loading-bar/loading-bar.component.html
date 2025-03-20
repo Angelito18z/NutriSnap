@@ -1,0 +1,37 @@
+<div class="loading-bar-container">
+    <!-- Combined Bar -->
+    <div class="loading-bar combined-bar">
+      <div class="bar calories" [style.width.%]="caloriesPercentage"></div>
+      <div class="bar protein" [style.width.%]="proteinPercentage"></div>
+      <div class="bar carbs" [style.width.%]="carbsPercentage"></div>
+      <div class="bar fat" [style.width.%]="fatPercentage"></div>
+    </div>
+  
+    <!-- Separate Bars -->
+    <div class="separate-bars">
+      <div class="bar-container">
+        <span class="label">Calories:</span>
+        <div class="loading-bar">
+          <div class="bar calories" [style.width.%]="caloriesPercentage"></div>
+        </div>
+      </div>
+      <div class="bar-container">
+        <span class="label">Protein:</span>
+        <div class="loading-bar">
+          <div class="bar protein" [style.width.%]="proteinPercentage"></div>
+        </div>
+      </div>
+      <div class="bar-container">
+        <span class="label">Carbs:</span>
+        <div class="loading-bar">
+          <div class="bar carbs" [style.width.%]="carbsPercentage"></div>
+        </div>
+      </div>
+      <div class="bar-container">
+        <span class="label">Fat:</span>
+        <div class="loading-bar">
+          <div class="bar fat" [style.width.%]="fatPercentage"></div>
+        </div>
+      </div>
+    </div>
+  </div>

@@ -1,64 +1,59 @@
 <div class="three-column-banner">
-  <!-- First Column: Robot Image -->
-  <div class="column">
+  <!-- First Column: Robot Image (1/4 width) -->
+  <div class="column robot-column">
     <img src="/assets/robot/happy robot.png" alt="Robot" class="robot-image" />
   </div>
 
-  <!-- Second Column: Nutritional Table -->
-  <div class="column">
+  <!-- Second Column: Nutrient Card (50% width) -->
+  <div class="column nutrient-column">
     <mat-card class="nutrition-card">
       <mat-card-header>
         <mat-card-title>Nutritional Values</mat-card-title>
       </mat-card-header>
       <mat-card-content>
-        <table mat-table [dataSource]="nutritionData" class="nutrition-table">
-          <!-- Food Column -->
-          <ng-container matColumnDef="food">
-            <th mat-header-cell *matHeaderCellDef>Food</th>
-            <td mat-cell *matCellDef="let element">{{ element.food }}</td>
-          </ng-container>
-
-          <!-- Calories Column -->
-          <ng-container matColumnDef="calories">
-            <th mat-header-cell *matHeaderCellDef>Calories</th>
-            <td mat-cell *matCellDef="let element">{{ element.calories }}</td>
-          </ng-container>
-
-          <!-- Protein Column -->
-          <ng-container matColumnDef="protein">
-            <th mat-header-cell *matHeaderCellDef>Protein (g)</th>
-            <td mat-cell *matCellDef="let element">{{ element.protein }}</td>
-          </ng-container>
-
-          <!-- Carbs Column -->
-          <ng-container matColumnDef="carbs">
-            <th mat-header-cell *matHeaderCellDef>Carbs (g)</th>
-            <td mat-cell *matCellDef="let element">{{ element.carbs }}</td>
-          </ng-container>
-
-          <!-- Fat Column -->
-          <ng-container matColumnDef="fat">
-            <th mat-header-cell *matHeaderCellDef>Fat (g)</th>
-            <td mat-cell *matCellDef="let element">{{ element.fat }}</td>
-          </ng-container>
-
-          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-          <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
-        </table>
+        <div class="nutrition-content">
+          <!-- Left Side: Numeric Values -->
+          <div class="numeric-values">
+            <div class="nutrition-item">
+              <span class="label">Calories:</span>
+              <span class="value">{{ nutritionData.calories }} kcal</span>
+            </div>
+            <div class="nutrition-item">
+              <span class="label">Protein:</span>
+              <span class="value">{{ nutritionData.protein }} g</span>
+            </div>
+            <div class="nutrition-item">
+              <span class="label">Carbs:</span>
+              <span class="value">{{ nutritionData.carbs }} g</span>
+            </div>
+            <div class="nutrition-item">
+              <span class="label">Fat:</span>
+              <span class="value">{{ nutritionData.fat }} g</span>
+            </div>
+          </div>
+    
+          <!-- Right Side: Visual Representations -->
+          <div class="visual-values">
+            <app-loading-bar
+              [calories]="nutritionData.calories"
+              [protein]="nutritionData.protein"
+              [carbs]="nutritionData.carbs"
+              [fat]="nutritionData.fat">
+            </app-loading-bar>
+          </div>
+        </div>
       </mat-card-content>
     </mat-card>
   </div>
 
-  <!-- Third Column: Camera Card -->
-  <div class="column">
+  <!-- Third Column: Camera Card (1/4 width) -->
+  <div class="column camera-column">
     <mat-card class="camera-card">
       <mat-card-header>
         <mat-card-title>Scan Product</mat-card-title>
       </mat-card-header>
       <mat-card-content>
         <div class="camera-container" #cameraContainer>
-          <!-- Camera feed will go here -->
-          <p *ngIf="!isCameraActive">Click "Activate Camera" to start scanning.</p>
           <video #cameraFeed autoplay></video>
         </div>
         <button mat-raised-button color="primary" (click)="activateCamera()">

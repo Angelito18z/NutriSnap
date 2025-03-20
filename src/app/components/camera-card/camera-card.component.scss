@@ -2,66 +2,145 @@
   display: flex;
   height: 100vh; // Full viewport height
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   padding: 20px;
   background-color: #FFE5B4; // Light peach background
+  transition: flex-direction 0.3s ease;
+
 
   .column {
-    flex: 1; // Each column takes equal space
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 10px;
+  }
 
-    .robot-image {
-      max-width: 100%;
-      height: auto;
-    }
+  .robot-column {
+    flex: 1; // 1/4 of the width
+    max-width: 25%; // Ensure it doesn't exceed 25%
+  }
 
-    .nutrition-card,
-    .camera-card {
-      max-width: 400px;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Subtle shadow
-      background-color: #ffffff; // White background for the cards
+  .nutrient-column {
+    flex: 2; // 50% of the width
+    max-width: 50%; // Ensure it doesn't exceed 50%
+  }
 
-      mat-card-title {
-        font-size: 24px;
-        font-weight: bold;
-        color: #2E572C; // Dark green for the title
-      }
+  .camera-column {
+    flex: 1; // 1/4 of the width
+    max-width: 25%; // Ensure it doesn't exceed 25%
+  }
 
-      mat-card-content {
-        font-size: 16px;
-        color: #4F8A5F; // Medium green for the content
-      }
-    }
+  .robot-image {
+    max-width: 100%;
+    height: auto;
+  }
 
-    .nutrition-table {
-      width: 100%;
-    }
-
-    .camera-container {
-      width: 100%;
-      height: 200px;
-      border: 2px dashed #2E572C; // Dashed border for the camera container
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 20px;
-
-      video {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-    }
-
-    button {
-      width: 100%;
-      font-size: 16px;
+  .nutrition-card {
+    width: 100%; // Ensure the card takes full width of its container
+    max-width: 800px; // Constrain the maximum width of the card
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Subtle shadow
+    background-color: #ffffff; // White background for the card
+    margin: 0 auto; // Center the card horizontally
+  
+    mat-card-title {
+      font-size: 26px;
       font-weight: bold;
+    }
+  
+    .nutrition-content {
+      display: flex;
+      gap: 20px; // Space between the two columns
+      width: 100%; // Ensure the content takes full width of the card
+      font-size: 18px; // Increase the base font size
+    
+      .numeric-values,
+      .visual-values {
+        flex: 1; // Each column takes equal space
+        min-width: 0; // Prevent flex items from overflowing
+      }
+    
+      .nutrition-item {
+        margin-bottom: 20px; // Increase spacing between items
+    
+        .label {
+          font-weight: bold;
+          color: #2E572C; // Dark green for labels
+          font-size: 20px; // Larger font size for labels
+        }
+    
+        .value {
+          font-size: 18px; // Larger font size for values
+        }
+      }
+    
+      .visual-values {
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+
+
+  .horizontal-divider {
+    display: none; // Hide by default
+    width: 100%;
+    height: 1px;
+    background-color: #ccc; // Light gray divider
+    margin: 10px 0; // Add some spacing around the divider
+  }
+
+  .camera-container {
+    width: 100%;
+    height: 200px;
+    border: 2px dashed #2E572C; // Dashed border for the camera container
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+
+    video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  button {
+    width: 100%;
+    font-size: 16px;
+    font-weight: bold;
+  }
+}
+@media (max-width: 768px) {
+  .three-column-banner {
+    flex-direction: column; // Stack columns vertically
+    height: auto; // Adjust height to fit content
+
+    .column {
+      flex: none; // Disable flex for stacked layout
+      max-width: 100%; // Full width for each column
+      margin-bottom: 20px; // Add spacing between columns
+    }
+  }
+}
+@media (max-width: 768px) {
+  .nutrition-content {
+    flex-direction: column; // Stack columns vertically on smaller screens
+    gap: 15px; // Reduce gap between columns
+    font-size: 16px; // Reduce base font size for smaller screens
+
+    .nutrition-item {
+      margin-bottom: 15px; // Reduce spacing between items
+
+      .label {
+        font-size: 18px; // Smaller font size for labels
+      }
+
+      .value {
+        font-size: 16px; // Smaller font size for values
+      }
     }
   }
 }
