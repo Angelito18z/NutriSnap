@@ -10,6 +10,8 @@ import { TableContentsComponent } from './table-contents/table-contents.componen
 import { ReviewCardComponent } from './review-card/review-card.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { CameraCardComponent } from './camera-card/camera-card.component';
+import { MatButtonModule } from '@angular/material/button';
+import { QuienesSomosComponent } from './quienes-somos/quienes-somos.component';
 
 @NgModule({
   declarations: [
@@ -20,12 +22,14 @@ import { CameraCardComponent } from './camera-card/camera-card.component';
     NutrientBarComponent,
     TableContentsComponent,
     ReviewCardComponent,
-    CameraCardComponent
+    CameraCardComponent,
+    QuienesSomosComponent
   ],
   imports: [
     CommonModule,
     MatToolbarModule,
-    MatCardModule
+    MatCardModule,
+    MatButtonModule
   ],
   exports: [
     FormComponent,
@@ -35,7 +39,9 @@ import { CameraCardComponent } from './camera-card/camera-card.component';
     NutrientBarComponent,
     TableContentsComponent,
     ReviewCardComponent,
-    CameraCardComponent
+    CameraCardComponent,
+    QuienesSomosComponent
+
   ]
 })
 export class ComponentsModule { }

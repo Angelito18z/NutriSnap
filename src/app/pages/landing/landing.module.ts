@@ -5,7 +5,6 @@ import { ComponentsModule } from '../../components/components.module';
 import { HeroeComponent } from './heroe/heroe.component';
 
 
-
 @NgModule({
   declarations: [
     HeroeComponent
