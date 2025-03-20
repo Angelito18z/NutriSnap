@@ -1,6 +1,13 @@
 <div class="container">
     <div class="form_area">
-        <p class="title">{{ isLogin ? 'INICIAR SESIÓN' : 'REGISTRARSE' }}</p>
+        
+        <div>
+            <button mat-button (click)="goBack()">
+                <mat-icon>arrow_back</mat-icon>
+              </button>
+              <p class="title">{{ isLogin ? 'INICIAR SESIÓN' : 'REGISTRARSE' }}</p>
+              
+        </div>
         
             <!-- Campo de nombre solo para registro -->
             <div class="form_group" *ngIf="!isLogin">
