@@ -8,7 +8,7 @@
     <!-- Right Section: Navigation Links -->
     <div class="right-section">
         <a mat-button routerLink="/landing/heroe" class="mat-body-2">Home</a>
-        <a mat-button routerLink="/auth/register" class="mat-body-2">Register</a>
-        <a mat-button routerLink="/auth/login" class="mat-body-2">Login</a>
+        <a mat-button (click)="register()" class="mat-body-2">Register</a>
+        <a mat-button (click)="login()" class="mat-body-2">Login</a>
     </div>
   </mat-toolbar>
