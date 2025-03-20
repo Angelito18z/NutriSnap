@@ -1,112 +1,149 @@
 {
-    "usuarios": [
-      {
-        "id": 1,
-        "nombre": "Juan Pérez",
-        "email": "juan.perez@gmail.com",
-        "rol": "paciente",
-        "contraseña": "hashed_password_123",
-        "fecha_registro": "2023-10-01",
-        "ultimo_acceso": "2023-10-15"
-      },
-      {
-        "id": 2,
-        "nombre": "Ana Gómez",
-        "email": "ana.gomez@gmail.com",
-        "rol": "administrador",
-        "contraseña": "hashed_password_456",
-        "fecha_registro": "2023-09-15",
-        "ultimo_acceso": "2023-10-14"
-      },
-      {
-        "id": 3,
-        "nombre": "Carlos Ruiz",
-        "email": "carlos.ruiz@gmail.com",
-        "rol": "trabajador",
-        "contraseña": "hashed_password_789",
-        "fecha_registro": "2023-08-20",
-        "ultimo_acceso": "2023-10-13"
-      }
-    ],
-    "pacientes": [
-      {
-        "id": 1,
-        "usuario_id": 1,
-        "edad": 30,
-        "genero": "masculino",
-        "altura": 175,
-        "peso": 70,
-        "objetivo": "perder peso",
-        "alergias": ["nueces", "mariscos"],
-        "condiciones_medicas": ["diabetes"],
-        "historial_nutricional": [
-          {
-            "fecha": "2023-10-10",
-            "comida": "Desayuno",
-            "descripcion": "Avena con frutas",
-            "calorias": 300
-          },
-          {
-            "fecha": "2023-10-10",
-            "comida": "Almuerzo",
-            "descripcion": "Pollo a la plancha con ensalada",
-            "calorias": 450
-          }
-        ]
-      }
-    ],
-    "administradores": [
-      {
-        "id": 1,
-        "usuario_id": 2,
-        "nivel_acceso": "alto",
-        "responsabilidades": ["gestionar usuarios", "supervisar trabajadores"]
-      }
-    ],
-    "trabajadores": [
-      {
-        "id": 1,
-        "usuario_id": 3,
-        "especialidad": "nutricionista",
-        "horario": "Lunes a Viernes, 9am - 5pm",
-        "pacientes_asignados": [1]
-      }
-    ],
-    "citas": [
-      {
-        "id": 1,
-        "paciente_id": 1,
-        "trabajador_id": 1,
-        "fecha": "2023-10-20",
-        "hora": "10:00",
-        "duracion": 60,
-        "notas": "Consulta inicial para plan de alimentación"
-      }
-    ],
-    "planes_nutricionales": [
-      {
-        "id": 1,
-        "paciente_id": 1,
-        "trabajador_id": 1,
-        "fecha_creacion": "2023-10-15",
-        "descripcion": "Plan bajo en carbohidratos",
-        "detalles": [
-          {
-            "dia": "Lunes",
-            "comidas": [
-              {
-                "comida": "Desayuno",
-                "descripcion": "Huevos revueltos con espinacas",
-                "calorias": 250
-              },
-              {
-                "comida": "Almuerzo",
-                "descripcion": "Pescado al horno con brócoli",
-                "calorias": 400
-              }
-            ]
-          }
-        ]
-      }
-    ]
-  }
+  "usuarios": [
+    {
+      "id": "1",
+      "nombre": "Juan Pérez",
+      "email": "juan.perez@gmail.com",
+      "rol": "paciente",
+      "contraseña": "hashed_password_123",
+      "fecha_registro": "2023-10-01",
+      "ultimo_acceso": "2023-10-15"
+    },
+    {
+      "id": "2",
+      "nombre": "Ana Gómez",
+      "email": "ana.gomez@gmail.com",
+      "rol": "administrador",
+      "contraseña": "hashed_password_456",
+      "fecha_registro": "2023-09-15",
+      "ultimo_acceso": "2023-10-14"
+    },
+    {
+      "id": "3",
+      "nombre": "Carlos Ruiz",
+      "email": "carlos.ruiz@gmail.com",
+      "rol": "trabajador",
+      "contraseña": "hashed_password_789",
+      "fecha_registro": "2023-08-20",
+      "ultimo_acceso": "2023-10-13"
+    },
+    {
+      "id": "4",
+      "nombre": "María López",
+      "email": "maria.lopez@gmail.com",
+      "rol": "paciente",
+      "contraseña": "hashed_password_321",
+      "fecha_registro": "2023-07-10",
+      "ultimo_acceso": "2023-10-12"
+    },
+    {
+      "id": "5",
+      "nombre": "Pedro Sánchez",
+      "email": "pedro.sanchez@gmail.com",
+      "rol": "trabajador",
+      "contraseña": "hashed_password_654",
+      "fecha_registro": "2023-06-05",
+      "ultimo_acceso": "2023-10-11"
+    },
+    {
+      "id": "6",
+      "nombre": "Laura Fernández",
+      "email": "laura.fernandez@gmail.com",
+      "rol": "paciente",
+      "contraseña": "hashed_password_987",
+      "fecha_registro": "2023-05-12",
+      "ultimo_acceso": "2023-10-10"
+    }
+  ],
+  "pacientes": [
+    {
+      "id": "1",
+      "usuario_id": 1,
+      "edad": 30,
+      "genero": "masculino",
+      "altura": 175,
+      "peso": 70,
+      "objetivo": "perder peso",
+      "alergias": [
+        "nueces",
+        "mariscos"
+      ],
+      "condiciones_medicas": [
+        "diabetes"
+      ],
+      "historial_nutricional": [
+        {
+          "fecha": "2023-10-10",
+          "comida": "Desayuno",
+          "descripcion": "Avena con frutas",
+          "calorias": 300
+        },
+        {
+          "fecha": "2023-10-10",
+          "comida": "Almuerzo",
+          "descripcion": "Pollo a la plancha con ensalada",
+          "calorias": 450
+        }
+      ]
+    }
+  ],
+  "administradores": [
+    {
+      "id": "1",
+      "usuario_id": 2,
+      "nivel_acceso": "alto",
+      "responsabilidades": [
+        "gestionar usuarios",
+        "supervisar trabajadores"
+      ]
+    }
+  ],
+  "trabajadores": [
+    {
+      "id": "1",
+      "usuario_id": 3,
+      "especialidad": "nutricionista",
+      "horario": "Lunes a Viernes, 9am - 5pm",
+      "pacientes_asignados": [
+        1
+      ]
+    }
+  ],
+  "citas": [
+    {
+      "id": "1",
+      "paciente_id": 1,
+      "trabajador_id": 1,
+      "fecha": "2023-10-20",
+      "hora": "10:00",
+      "duracion": 60,
+      "notas": "Consulta inicial para plan de alimentación"
+    }
+  ],
+  "planes_nutricionales": [
+    {
+      "id": "1",
+      "paciente_id": 1,
+      "trabajador_id": 1,
+      "fecha_creacion": "2023-10-15",
+      "descripcion": "Plan bajo en carbohidratos",
+      "detalles": [
+        {
+          "dia": "Lunes",
+          "comidas": [
+            {
+              "comida": "Desayuno",
+              "descripcion": "Huevos revueltos con espinacas",
+              "calorias": 250
+            },
+            {
+              "comida": "Almuerzo",
+              "descripcion": "Pescado al horno con brócoli",
+              "calorias": 400
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
