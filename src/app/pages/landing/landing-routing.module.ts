@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HeroeComponent } from './heroe/heroe.component';
+import { HeroeComponents } from './heroe/heroe.component';
 
 const routes: Routes = [
   {
@@ -10,7 +10,7 @@ const routes: Routes = [
   },
   {
     path: 'heroe',
-    component: HeroeComponent,  
+    component: HeroeComponents,  
   },
   {
     path: '**',

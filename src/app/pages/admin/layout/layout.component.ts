@@ -1,6 +1,10 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { MatDialog } from '@angular/material/dialog';
+ import { DialogUserComponent } from '../../../components/dialog-user/dialog-user.component';
+import { UsersService } from '../../../services/users/users.service';
+import { Usuario } from '../../../nutri-data/interfaces/nutri-data';
+import { DialogComponent } from '../../../components/dialog/dialog.component';
 @Component({
   selector: 'app-layout',
   standalone: false,
@@ -8,51 +12,26 @@ import { MatDialog } from '@angular/material/dialog';
   styleUrl: './layout.component.scss'
 })
 export class LayoutComponent {
-
-
-
   public sidebarItems = [
     {label: 'Usuarios', icon: 'group', url: './users'},    
   ]
 
-  constructor(private router:Router, private dialog:MatDialog){}
+  constructor(private router:Router, private dialog:MatDialog, private usuarioService:UsersService){}
   
-  openDialog(): void {
-    const currentRoute = this.router.url;
-
-    switch (currentRoute) {
-      case '/admin/users':
-     //   this.openAgregarUsuarioDialog();
-        break;
-      case '/admin/trabajadores':
-//        this.openAgregarTrabajadorDialog();
-        break;
-      case '/admin/pacientes':
- //       this.openAgregarOtraPaginaDialog();
-        break;
-      default:
-        console.warn('No hay un diálogo definido para esta ruta:', currentRoute);
-        break;
-    }
-  }
-
-
-  // openAgregarUsuarioDialog(): void {
-  //   const dialogRef = this.dialog.open(DialogUserComponent, {
-  //     width: '500px'
-  //   });
-
-  //   dialogRef.afterClosed().subscribe(result => {
-  //     if (result) {
-  //       console.log('Usuario agregado:', result);
-  //       // Lógica para agregar el usuario
-  //     }
-  //   });
-  // }
-
-
   exit(){
     this.router.navigate(['/auth']);
 
   }
+
+   mostrarDialog(tittle:string,message:string,action:string | null){
+      const dialogRef = this.dialog.open(DialogComponent, {
+         data: {
+           title: tittle,
+           message: message,
+           action: action
+         }
+       });
+   
+       return dialogRef.afterClosed();
+     }
 }

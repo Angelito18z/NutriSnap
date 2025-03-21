@@ -13,9 +13,11 @@ import { MatButtonModule } from '@angular/material/button';
 import { QuienesSomosComponent } from './quienes-somos/quienes-somos.component';
 import { MatTableModule } from '@angular/material/table';
 import { LoadingBarComponent } from './loading-bar/loading-bar.component';
+import { SocialMediaComponent } from './social-media/social-media.component';
 import { MaterialModule } from '../material/material.module';
 import { DialogComponent } from './dialog/dialog.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { DialogUserComponent } from './dialog-user/dialog-user.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +31,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     QuienesSomosComponent,
     LoadingBarComponent,
     DialogComponent,
+    LoadingBarComponent,
+    SocialMediaComponent,
+    DialogUserComponent
   ],
   imports: [
     CommonModule,
@@ -49,7 +54,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     CameraCardComponent,
     QuienesSomosComponent,
     DialogComponent,
-
+    DialogUserComponent
   ]
 })
 export class ComponentsModule { }
