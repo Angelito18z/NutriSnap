@@ -1,47 +1,6 @@
 {
   "usuarios": [
     {
-      "id": "2",
-      "nombre": "Ana Gómez perez",
-      "email": "ana.gomez@gmail.com",
-      "rol": "administrador",
-      "contrasena": "hashed_password_456",
-      "fecha_registro": "2023-09-15",
-      "ultimo_acceso": "2023-10-14"
-    },
-    {
-      "id": "3",
-      "nombre": "Carlos Ruiz",
-      "email": "carlos.ruiz@gmail.com",
-      "rol": "trabajador",
-      "contrasena": "hashed_password_789",
-      "fecha_registro": "2023-08-20",
-      "ultimo_acceso": "2023-10-13"
-    },
-    {
-      "id": "4",
-      "nombre": "María López",
-      "email": "maria.lopez@gmail.com",
-      "rol": "paciente",
-      "contrasena": "hashed_password_321",
-      "fecha_registro": "2023-07-10",
-      "ultimo_acceso": "2023-10-12"
-    },
-    {
-      "id": "6e68",
-      "nombre": "Jose Manuel",
-      "email": "pepe@gmail.com",
-      "rol": "admin",
-      "contrasena": "pepecontraseña"
-    },
-    {
-      "id": "8808",
-      "nombre": "Perla Luna",
-      "email": "perla@gmail.com",
-      "rol": "trabajador",
-      "contrasena": "1234567890987654321|1234567890"
-    },
-    {
       "id": "1742543711395",
       "nombre": "José Angel López Rivera",
       "email": "angel@gmail.com",
@@ -58,6 +17,31 @@
       "contrasena": "123456789",
       "fecha_registro": "2025-03-21T07:55:56.716Z",
       "ultimo_acceso": "2025-03-21T07:55:56.716Z"
+    },
+    {
+      "id": "1742562633050",
+      "nombre": "Winnie",
+      "email": "pepe@gmail.com",
+      "rol": "usuario",
+      "contrasena": "123456789",
+      "fecha_registro": "2025-03-21T13:10:32.427Z",
+      "ultimo_acceso": "2025-03-21T13:10:32.428Z"
+    },
+    {
+      "id": "1742562879352",
+      "nombre": "Perla",
+      "email": "perla@gmail.com",
+      "rol": "usuario",
+      "contrasena": "123456789",
+      "fecha_registro": "2025-03-21T13:14:38.558Z",
+      "ultimo_acceso": "2025-03-21T13:14:38.558Z"
+    },
+    {
+      "id": "",
+      "nombre": "Gio",
+      "email": "gio@gmail.com",
+      "rol": "administrador",
+      "contrasena": "123456789098765432"
     }
   ],
   "pacientes": [
@@ -119,10 +103,19 @@
       "id": "1",
       "paciente_id": 1,
       "trabajador_id": 1,
-      "fecha": "2023-10-20",
+      "fecha": "2023-10-11",
       "hora": "10:00",
       "duracion": 60,
       "notas": "Consulta inicial para plan de alimentación"
+    },
+    {
+      "id": "",
+      "paciente_id": "1",
+      "trabajador_id": "1",
+      "fecha": "2025-04-20",
+      "hora": "19:00",
+      "duracion": 60,
+      "notas": "descripcion"
     }
   ],
   "planes_nutricionales": [

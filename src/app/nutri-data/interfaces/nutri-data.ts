@@ -62,4 +62,14 @@ export interface Alimento {
     grasas: number;
     fibra: number;
   }
+
+  export interface Cita {
+    id: string;
+    paciente_id: number;
+    trabajador_id: number;
+    fecha: string;
+    hora: string;
+    duracion: number;
+    notas: string;
+  }
   

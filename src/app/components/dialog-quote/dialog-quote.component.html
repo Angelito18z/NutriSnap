@@ -1,0 +1,69 @@
+<h2 mat-dialog-title>{{ quoteForm.value.id ? 'Editar Quote' : 'Agregar Quote' }}</h2>
+
+<mat-dialog-content>
+  <form [formGroup]="quoteForm">
+    <!-- Paciente ID -->
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>Paciente ID</mat-label>
+      <input matInput formControlName="paciente_id" required>
+      <mat-error *ngIf="quoteForm.get('paciente_id')?.hasError('required')">
+        El ID del paciente es obligatorio.
+      </mat-error>
+    </mat-form-field>
+
+    <!-- Trabajador ID -->
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>Trabajador ID</mat-label>
+      <input matInput formControlName="trabajador_id" required>
+      <mat-error *ngIf="quoteForm.get('trabajador_id')?.hasError('required')">
+        El ID del trabajador es obligatorio.
+      </mat-error>
+    </mat-form-field>
+
+    <!-- Fecha -->
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>Fecha</mat-label>
+      <input matInput type="date" formControlName="fecha" required>
+      <mat-error *ngIf="quoteForm.get('fecha')?.hasError('required')">
+        La fecha es obligatoria.
+      </mat-error>
+    </mat-form-field>
+
+    <!-- Hora -->
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>Hora</mat-label>
+      <input matInput type="time" formControlName="hora" required>
+      <mat-error *ngIf="quoteForm.get('hora')?.hasError('required')">
+        La hora es obligatoria.
+      </mat-error>
+    </mat-form-field>
+
+    <!-- Duración -->
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>Duración (minutos)</mat-label>
+      <input matInput type="number" formControlName="duracion" required>
+      <mat-error *ngIf="quoteForm.get('duracion')?.hasError('required')">
+        La duración es obligatoria.
+      </mat-error>
+      <mat-error *ngIf="quoteForm.get('duracion')?.hasError('min')">
+        La duración debe ser mayor a 0.
+      </mat-error>
+    </mat-form-field>
+
+    <!-- Notas -->
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>Notas</mat-label>
+      <textarea matInput formControlName="notas" required></textarea>
+      <mat-error *ngIf="quoteForm.get('notas')?.hasError('required')">
+        Las notas son obligatorias.
+      </mat-error>
+    </mat-form-field>
+  </form>
+</mat-dialog-content>
+
+<mat-dialog-actions>
+  <button mat-button class="cancel-button" (click)="onNoClick()">Cancelar</button>
+  <button mat-raised-button color="primary" class="confirm-button" (click)="onConfirm()" [disabled]="quoteForm.invalid">
+    {{ quoteForm.value.id ? 'Actualizar' : 'Agregar' }}
+  </button>
+</mat-dialog-actions>

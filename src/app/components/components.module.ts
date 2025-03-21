@@ -20,6 +20,7 @@ import { MaterialModule } from '../material/material.module';
 import { DialogComponent } from './dialog/dialog.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { DialogUserComponent } from './dialog-user/dialog-user.component';
+import { DialogQuoteComponent } from './dialog-quote/dialog-quote.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { DialogUserComponent } from './dialog-user/dialog-user.component';
     DialogComponent,
     LoadingBarComponent,
     SocialMediaComponent,
-    DialogUserComponent
+    DialogUserComponent,
+    DialogQuoteComponent
   ],
   imports: [
     CommonModule,

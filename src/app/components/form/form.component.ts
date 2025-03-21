@@ -67,6 +67,7 @@ export class FormComponent {
   // Método para manejar el registro
   register() {
     // Obtener los valores de los campos
+    
     const name = (document.getElementById('name') as HTMLInputElement).value;
     const email = (document.getElementById('email') as HTMLInputElement).value;
     const password = (document.getElementById('password') as HTMLInputElement).value;

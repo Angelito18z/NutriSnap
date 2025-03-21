@@ -7,10 +7,12 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MaterialModule } from '../../material/material.module';
 import { UsersComponent } from './users/users.component';
 import { ComponentsModule } from '../../components/components.module';
+import { CitasComponent } from './citas/citas.component';
 @NgModule({
   declarations: [
     LayoutComponent,
     UsersComponent,
+    CitasComponent,
   ],
   imports: [
     CommonModule,

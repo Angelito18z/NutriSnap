@@ -13,7 +13,8 @@ import { DialogComponent } from '../../../components/dialog/dialog.component';
 })
 export class LayoutComponent {
   public sidebarItems = [
-    {label: 'Usuarios', icon: 'group', url: './users'},    
+    {label: 'Usuarios', icon: 'group', url: './users'},
+    {label: 'Citas', icon: 'event', url: './quote'}   
   ]
 
   constructor(private router:Router, private dialog:MatDialog, private usuarioService:UsersService){}

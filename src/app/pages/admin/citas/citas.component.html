@@ -1,0 +1,71 @@
+<div class="background-image">
+
+    <!-- Botón Add -->
+    <button (click)="openDialog()" class="button-add" mat-icon-button color="success" aria-label="Add">
+      <mat-icon>add_circle</mat-icon>
+    </button>
+  
+    <!-- Tabla -->
+    <div class="mat-elevation-z8">
+      <table class="body" mat-table [dataSource]="Citas" class="mat-elevation-z8">
+  
+        <!-- ID Column -->
+        <ng-container matColumnDef="id">
+          <th mat-header-cell *matHeaderCellDef> ID </th>
+          <td mat-cell *matCellDef="let element"> {{ element.id }} </td>
+        </ng-container>
+  
+        <!-- Paciente ID Column -->
+        <ng-container matColumnDef="paciente_id">
+          <th mat-header-cell *matHeaderCellDef> Patient ID </th>
+          <td mat-cell *matCellDef="let element"> {{ element.paciente_id }} </td>
+        </ng-container>
+  
+        <!-- Trabajador ID Column -->
+        <ng-container matColumnDef="trabajador_id">
+          <th mat-header-cell *matHeaderCellDef> Worker ID </th>
+          <td mat-cell *matCellDef="let element"> {{ element.trabajador_id }} </td>
+        </ng-container>
+  
+        <!-- Fecha Column -->
+        <ng-container matColumnDef="fecha">
+          <th mat-header-cell *matHeaderCellDef> Date </th>
+          <td mat-cell *matCellDef="let element"> {{ element.fecha }} </td>
+        </ng-container>
+  
+        <!-- Hora Column -->
+        <ng-container matColumnDef="hora">
+          <th mat-header-cell *matHeaderCellDef> Hour </th>
+          <td mat-cell *matCellDef="let element"> {{ element.hora }} </td>
+        </ng-container>
+  
+        <!-- Duración Column -->
+        <ng-container matColumnDef="duracion">
+          <th mat-header-cell *matHeaderCellDef> Duration </th>
+          <td mat-cell *matCellDef="let element"> {{ element.duracion }} </td>
+        </ng-container>
+  
+        <!-- Notas Column -->
+        <ng-container matColumnDef="notas">
+          <th mat-header-cell *matHeaderCellDef> Notes </th>
+          <td mat-cell *matCellDef="let element"> {{ element.notas }} </td>
+        </ng-container>
+  
+        <!-- Actions Column -->
+        <ng-container matColumnDef="actions">
+          <th mat-header-cell *matHeaderCellDef> Actions </th>
+          <td mat-cell *matCellDef="let element">
+            <button mat-icon-button color="primary" aria-label="Edit" (click)="edit(element)">
+              <mat-icon>edit</mat-icon>
+            </button>
+            <button mat-icon-button color="warn" aria-label="Delete" (click)="delete(element)">
+              <mat-icon>delete</mat-icon>
+            </button>
+          </td>
+        </ng-container>
+  
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+    </div>
+  </div>
