@@ -150,5 +150,39 @@
         }
       ]
     }
+  ],
+  "productos": [
+    {
+      "id": "1",
+      "nombre": "Manzana",
+      "calorias": 52,
+      "proteinas": 0.3,
+      "azucares": 10.4,
+      "grasas": 0.2
+    },
+    {
+      "id": "2",
+      "nombre": "Galletas",
+      "calorias": 500,
+      "proteinas": 6,
+      "azucares": 25,
+      "grasas": 20
+    },
+    {
+      "id": "3",
+      "nombre": "Papas",
+      "calorias": 150,
+      "proteinas": 2,
+      "azucares": 0.2,
+      "grasas": 7
+    },
+    {
+      "id": "4",
+      "nombre": "Plátano",
+      "calorias": 89,
+      "proteinas": 1.1,
+      "azucares": 12.2,
+      "grasas": 0.3
+    }
   ]
 }
