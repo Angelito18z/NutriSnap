@@ -21,7 +21,7 @@ const routes: Routes = [
     pathMatch: 'full', //Solo se redirecciona si la ruta es exactamente vacia
   },
   { path: 'nutriData', loadChildren: () => import('./nutri-data/nutri-data.module').then(m => m.NutriDataModule) },
-  
+
 
 ];
 

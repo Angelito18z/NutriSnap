@@ -1,0 +1,22 @@
+<div class="container">
+  <h2 class="title">Información Nutricional de Frutas</h2>
+  <div class="carousel-container">
+    <div class="cards-container">
+      <div class="card" *ngFor="let fruit of displayedFruits">
+        <div class="card-image">
+          <img [src]="fruit.image" [alt]="fruit.name">
+        </div>
+        <div class="card-content">
+          <h3>{{ fruit.name }}</h3>
+          <div class="nutrition-info">
+            <p><strong>Proteínas:</strong> {{ fruit.protein }}g</p>
+            <p><strong>Carbohidratos:</strong> {{ fruit.carbohydrates }}g</p>
+            <p><strong>Azúcares:</strong> {{ fruit.sugar }}g</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-info">
+    </div>
+  </div>
+</div>

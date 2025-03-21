@@ -11,8 +11,9 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
-import { MatSidenavModule } from '@angular/material/sidenav';
 
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
@@ -22,6 +23,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    RouterModule,
     ComponentsModule,
     MatButtonModule,
     BrowserAnimationsModule,

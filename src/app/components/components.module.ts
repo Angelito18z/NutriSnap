@@ -13,6 +13,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { QuienesSomosComponent } from './quienes-somos/quienes-somos.component';
 import { MatTableModule } from '@angular/material/table';
 import { LoadingBarComponent } from './loading-bar/loading-bar.component';
+import { FruitCardComponent } from './fruit-card/fruit-card.component';
+
 import { SocialMediaComponent } from './social-media/social-media.component';
 import { MaterialModule } from '../material/material.module';
 import { DialogComponent } from './dialog/dialog.component';
@@ -30,6 +32,7 @@ import { DialogUserComponent } from './dialog-user/dialog-user.component';
     CameraCardComponent,
     QuienesSomosComponent,
     LoadingBarComponent,
+    FruitCardComponent,
     DialogComponent,
     LoadingBarComponent,
     SocialMediaComponent,
@@ -53,6 +56,7 @@ import { DialogUserComponent } from './dialog-user/dialog-user.component';
     ReviewCardComponent,
     CameraCardComponent,
     QuienesSomosComponent,
+    FruitCardComponent,
     DialogComponent,
     DialogUserComponent
   ]
