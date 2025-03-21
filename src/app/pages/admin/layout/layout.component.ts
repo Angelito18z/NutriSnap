@@ -20,7 +20,8 @@ export class LayoutComponent {
   
   exit(){
     this.router.navigate(['/auth']);
-
+    this.usuarioService.removeToken();
+    console.log(localStorage.getItem('token'))
   }
 
    mostrarDialog(tittle:string,message:string,action:string | null){

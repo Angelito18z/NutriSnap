@@ -8,7 +8,7 @@ export interface NutriData {
 }
 
 export interface Usuario {
-    id: number;
+    id: string 
     nombre: string;
     email: string;
     rol: string;

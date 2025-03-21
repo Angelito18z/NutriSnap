@@ -28,15 +28,6 @@
       "ultimo_acceso": "2023-10-12"
     },
     {
-      "id": "5",
-      "nombre": "Pedro Sánchez",
-      "email": "pedro.sanchez@gmail.com",
-      "rol": "trabajador",
-      "contrasena": "hashed_password_654",
-      "fecha_registro": "2023-06-05",
-      "ultimo_acceso": "2023-10-11"
-    },
-    {
       "id": "6e68",
       "nombre": "Jose Manuel",
       "email": "pepe@gmail.com",
@@ -51,11 +42,22 @@
       "contrasena": "1234567890987654321|1234567890"
     },
     {
-      "id": "2f66",
-      "nombre": "Angel",
+      "id": "1742543711395",
+      "nombre": "José Angel López Rivera",
       "email": "angel@gmail.com",
-      "rol": "trabajador",
-      "contrasena": "234567898765432qw456789"
+      "rol": "usuario",
+      "contrasena": "123456789",
+      "fecha_registro": "2025-03-21T07:55:11.069Z",
+      "ultimo_acceso": "2025-03-21T07:55:11.069Z"
+    },
+    {
+      "id": "1742543757556",
+      "nombre": "Christian",
+      "email": "christian@gmai.com",
+      "rol": "usuario",
+      "contrasena": "123456789",
+      "fecha_registro": "2025-03-21T07:55:56.716Z",
+      "ultimo_acceso": "2025-03-21T07:55:56.716Z"
     }
   ],
   "pacientes": [
