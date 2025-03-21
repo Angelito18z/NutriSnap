@@ -62,13 +62,6 @@
       "contrasena": "123456789",
       "fecha_registro": "2025-03-21T13:14:38.558Z",
       "ultimo_acceso": "2025-03-21T13:14:38.558Z"
-    },
-    {
-      "id": "",
-      "nombre": "Gio",
-      "email": "gio@gmail.com",
-      "rol": "administrador",
-      "contrasena": "123456789098765432"
     }
   ],
   "pacientes": [
