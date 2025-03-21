@@ -3,19 +3,17 @@
     <mat-sidenav #sidenav mode="push" [ngStyle]="{ width: '250px' }">
       <mat-toolbar>
         <span>Menú</span>
-        <span class="spacer"></span>
+        <span class="spacer"></span> 
         <button mat-icon-button (click)="sidenav.toggle()">
           <mat-icon>menu</mat-icon>
-        </button>
-  
+        </button>              
       </mat-toolbar>
 
       <mat-nav-list>
         <mat-list-item
           *ngFor="let item of sidebarItems"
           [routerLink]="item.url"
-          (click)="sidenav.toggle()"
-        >
+          (click)="sidenav.toggle()">
           <mat-icon matListItemIcon>{{ item.icon }}</mat-icon>
           {{ item.label }}
         </mat-list-item>
@@ -25,18 +23,19 @@
     </mat-sidenav>
   
   
-    <mat-toolbar>
+    <mat-toolbar class="toolbar">      
       <button mat-icon-button (click)="sidenav.toggle()">
         <mat-icon>menu</mat-icon>
       </button>
+      <h1 class="tittle">Panel Administrativo</h1>
   
       <span class="spacer"></span>
   
 
 
       <button class="button-exit" (click)="exit()" mat-button>
-        Salir
-      </button>
+        Cerrar Sesión
+      </button> 
 
     </mat-toolbar>
   

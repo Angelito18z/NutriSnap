@@ -11,12 +11,39 @@
     },
     {
       "id": "1742543757556",
-      "nombre": "Christian",
+      "nombre": "Christian Barragán Páez",
       "email": "christian@gmai.com",
       "rol": "usuario",
       "contrasena": "123456789",
       "fecha_registro": "2025-03-21T07:55:56.716Z",
       "ultimo_acceso": "2025-03-21T07:55:56.716Z"
+    },
+    {
+      "id": "1742563944165",
+      "nombre": "Perla Luna",
+      "email": "perla@gmail.com",
+      "rol": "paciente",
+      "contrasena": "potrero",
+      "fecha_registro": "2025-03-21T13:32:23.237Z",
+      "ultimo_acceso": "2025-03-21T13:32:23.238Z"
+    },
+    {
+      "id": "1742564140827",
+      "nombre": "Jose Manuel Lara Villalobos",
+      "email": "pepe@gmail.com",
+      "rol": "trabajador",
+      "contrasena": "pepe123",
+      "fecha_registro": "2025-03-21T13:35:40.298Z",
+      "ultimo_acceso": "2025-03-21T13:35:40.298Z"
+    },
+    {
+      "id": "1742564384119",
+      "nombre": "Cesar Mundo Gonzalez",
+      "email": "mundo@gmail.com",
+      "rol": "administrador",
+      "contrasena": "mundote",
+      "fecha_registro": "2025-03-21T13:39:43.181Z",
+      "ultimo_acceso": "2025-03-21T13:39:43.181Z"
     },
     {
       "id": "1742562633050",

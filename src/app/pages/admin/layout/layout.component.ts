@@ -20,7 +20,7 @@ export class LayoutComponent {
   constructor(private router:Router, private dialog:MatDialog, private usuarioService:UsersService){}
   
   exit(){
-    this.router.navigate(['/auth']);
+    this.router.navigate(['/landing']);
     this.usuarioService.removeToken();
     console.log(localStorage.getItem('token'))
   }

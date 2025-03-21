@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { UsersService } from '../../services/users/users.service';
 
 @Component({
   selector: 'app-navbar',
@@ -8,14 +9,23 @@ import { Router } from '@angular/router';
   styleUrl: './navbar.component.scss'
 })
 export class NavbarComponent {
-
-  constructor(private router: Router){}
+  isAuthenticated: boolean = false;
+  constructor(private router: Router, private userService: UsersService){}
   
+  ngOnInit(){
+   this.isAuthenticated = this.userService.isAuthenticated();
+  }
+
   login(){
     this.router.navigate(['/auth/login'])
   }
 
   register(){
     this.router.navigate(['/auth/register']) 
+  }
+
+  logout(){
+    this.userService.removeToken();
+    this.isAuthenticated = this.userService.isAuthenticated(); 
   }
 }
