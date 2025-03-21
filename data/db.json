@@ -1,249 +1,152 @@
 {
-    "usuarios": [
-      {
-        "id": 1,
-        "nombre": "Juan Pérez",
-        "email": "juan.perez@gmail.com",
-        "rol": "paciente",
-        "contraseña": "hashed_password_123",
-        "fecha_registro": "2023-10-01",
-        "ultimo_acceso": "2023-10-15"
-      },
-      {
-        "id": 2,
-        "nombre": "Ana Gómez",
-        "email": "ana.gomez@gmail.com",
-        "rol": "administrador",
-        "contraseña": "hashed_password_456",
-        "fecha_registro": "2023-09-15",
-        "ultimo_acceso": "2023-10-14"
-      },
-      {
-        "id": 3,
-        "nombre": "Carlos Ruiz",
-        "email": "carlos.ruiz@gmail.com",
-        "rol": "trabajador",
-        "contraseña": "hashed_password_789",
-        "fecha_registro": "2023-08-20",
-        "ultimo_acceso": "2023-10-13"
-      }
-    ],
-    "pacientes": [
-      {
-        "id": 1,
-        "usuario_id": 1,
-        "edad": 30,
-        "genero": "masculino",
-        "altura": 175,
-        "peso": 70,
-        "objetivo": "perder peso",
-        "alergias": ["nueces", "mariscos"],
-        "condiciones_medicas": ["diabetes"],
-        "historial_nutricional": [
-          {
-            "fecha": "2023-10-10",
-            "comida": "Desayuno",
-            "descripcion": "Avena con frutas",
-            "calorias": 300
-          },
-          {
-            "fecha": "2023-10-10",
-            "comida": "Almuerzo",
-            "descripcion": "Pollo a la plancha con ensalada",
-            "calorias": 450
-          }
-        ]
-      }
-    ],
-    "administradores": [
-      {
-        "id": 1,
-        "usuario_id": 2,
-        "nivel_acceso": "alto",
-        "responsabilidades": ["gestionar usuarios", "supervisar trabajadores"]
-      }
-    ],
-    "trabajadores": [
-      {
-        "id": 1,
-        "usuario_id": 3,
-        "especialidad": "nutricionista",
-        "horario": "Lunes a Viernes, 9am - 5pm",
-        "pacientes_asignados": [1]
-      }
-    ],
-    "citas": [
-      {
-        "id": 1,
-        "paciente_id": 1,
-        "trabajador_id": 1,
-        "fecha": "2023-10-20",
-        "hora": "10:00",
-        "duracion": 60,
-        "notas": "Consulta inicial para plan de alimentación"
-      }
-    ],
-    "planes_nutricionales": [
-      {
-        "id": 1,
-        "paciente_id": 1,
-        "trabajador_id": 1,
-        "fecha_creacion": "2023-10-15",
-        "descripcion": "Plan bajo en carbohidratos",
-        "detalles": [
-          {
-            "dia": "Lunes",
-            "comidas": [
-              {
-                "comida": "Desayuno",
-                "descripcion": "Huevos revueltos con espinacas",
-                "calorias": 250
-              },
-              {
-                "comida": "Almuerzo",
-                "descripcion": "Pescado al horno con brócoli",
-                "calorias": 400
-              }
-            ]
-          }
-        ]
-      }
-    ],
-      "alimentos": [
+  "usuarios": [
+    {
+      "id": "2",
+      "nombre": "Ana Gómez perez",
+      "email": "ana.gomez@gmail.com",
+      "rol": "administrador",
+      "contrasena": "hashed_password_456",
+      "fecha_registro": "2023-09-15",
+      "ultimo_acceso": "2023-10-14"
+    },
+    {
+      "id": "3",
+      "nombre": "Carlos Ruiz",
+      "email": "carlos.ruiz@gmail.com",
+      "rol": "trabajador",
+      "contrasena": "hashed_password_789",
+      "fecha_registro": "2023-08-20",
+      "ultimo_acceso": "2023-10-13"
+    },
+    {
+      "id": "4",
+      "nombre": "María López",
+      "email": "maria.lopez@gmail.com",
+      "rol": "paciente",
+      "contrasena": "hashed_password_321",
+      "fecha_registro": "2023-07-10",
+      "ultimo_acceso": "2023-10-12"
+    },
+    {
+      "id": "5",
+      "nombre": "Pedro Sánchez",
+      "email": "pedro.sanchez@gmail.com",
+      "rol": "trabajador",
+      "contrasena": "hashed_password_654",
+      "fecha_registro": "2023-06-05",
+      "ultimo_acceso": "2023-10-11"
+    },
+    {
+      "id": "6e68",
+      "nombre": "Jose Manuel",
+      "email": "pepe@gmail.com",
+      "rol": "admin",
+      "contrasena": "pepecontraseña"
+    },
+    {
+      "id": "8808",
+      "nombre": "Perla Luna",
+      "email": "perla@gmail.com",
+      "rol": "trabajador",
+      "contrasena": "1234567890987654321|1234567890"
+    },
+    {
+      "id": "2f66",
+      "nombre": "Angel",
+      "email": "angel@gmail.com",
+      "rol": "trabajador",
+      "contrasena": "234567898765432qw456789"
+    }
+  ],
+  "pacientes": [
+    {
+      "id": "1",
+      "usuario_id": 1,
+      "edad": 30,
+      "genero": "masculino",
+      "altura": 175,
+      "peso": 70,
+      "objetivo": "perder peso",
+      "alergias": [
+        "nueces",
+        "mariscos"
+      ],
+      "condiciones_medicas": [
+        "diabetes"
+      ],
+      "historial_nutricional": [
         {
-          "id": 1,
-          "nombre": "Manzana",
-          "calorias": 95,
-          "carbohidratos": 25,
-          "proteinas": 1,
-          "grasas": 0,
-          "fibra": 4
+          "fecha": "2023-10-10",
+          "comida": "Desayuno",
+          "descripcion": "Avena con frutas",
+          "calorias": 300
         },
         {
-          "id": 2,
-          "nombre": "Plátano",
-          "calorias": 105,
-          "carbohidratos": 27,
-          "proteinas": 1,
-          "grasas": 0,
-          "fibra": 3
-        },
-        {
-          "id": 3,
-          "nombre": "Galletas emperador",
-          "calorias": 105,
-          "carbohidratos": 27,
-          "proteinas": 1,
-          "grasas": 0,
-          "fibra": 3
-        },
-        {
-          "id": 4,
-          "nombre": "Papas",
-          "calorias": 105,
-          "carbohidratos": 27,
-          "proteinas": 1,
-          "grasas": 0,
-          "fibra": 3
-        },
-        {
-          "id": 5,
-          "nombre": "Pechuga de pollo",
-          "calorias": 165,
-          "carbohidratos": 0,
-          "proteinas": 31,
-          "grasas": 3.6,
-          "fibra": 0
-        },
-        {
-          "id": 6,
-          "nombre": "Arroz blanco",
-          "calorias": 130,
-          "carbohidratos": 28,
-          "proteinas": 2.7,
-          "grasas": 0.3,
-          "fibra": 0.4
-        },
-        {
-          "id": 7,
-          "nombre": "Aguacate",
-          "calorias": 160,
-          "carbohidratos": 9,
-          "proteinas": 2,
-          "grasas": 15,
-          "fibra": 7
-        },
-        {
-          "id": 8,
-          "nombre": "Huevo",
-          "calorias": 70,
-          "carbohidratos": 0.6,
-          "proteinas": 6,
-          "grasas": 5,
-          "fibra": 0
-        },
-        {
-          "id": 9,
-          "nombre": "Yogur natural",
-          "calorias": 59,
-          "carbohidratos": 3.6,
-          "proteinas": 10,
-          "grasas": 0.4,
-          "fibra": 0
-        },
-        {
-          "id": 10,
-          "nombre": "Pan integral",
-          "calorias": 69,
-          "carbohidratos": 12,
-          "proteinas": 4,
-          "grasas": 1,
-          "fibra": 2
-        },
-        {
-          "id": 11,
-          "nombre": "Salmón",
-          "calorias": 208,
-          "carbohidratos": 0,
-          "proteinas": 20,
-          "grasas": 13,
-          "fibra": 0
-        },
-        {
-          "id": 12,
-          "nombre": "Espinacas",
-          "calorias": 23,
-          "carbohidratos": 3.6,
-          "proteinas": 2.9,
-          "grasas": 0.4,
-          "fibra": 2.2
-        },
-        {
-          "id": 13,
-          "nombre": "Almendras",
-          "calorias": 579,
-          "carbohidratos": 21,
-          "proteinas": 21,
-          "grasas": 50,
-          "fibra": 12
-        },
-        {
-          "id": 14,
-          "nombre": "Leche entera",
-          "calorias": 61,
-          "carbohidratos": 4.8,
-          "proteinas": 3.2,
-          "grasas": 3.3,
-          "fibra": 0
-        },
-        {
-          "id": 15,
-          "nombre": "Queso cheddar",
-          "calorias": 402,
-          "carbohidratos": 1.3,
-          "proteinas": 25,
-          "grasas": 33,
-          "fibra": 0
+          "fecha": "2023-10-10",
+          "comida": "Almuerzo",
+          "descripcion": "Pollo a la plancha con ensalada",
+          "calorias": 450
         }
       ]
     }
+  ],
+  "administradores": [
+    {
+      "id": "1",
+      "usuario_id": 2,
+      "nivel_acceso": "alto",
+      "responsabilidades": [
+        "gestionar usuarios",
+        "supervisar trabajadores"
+      ]
+    }
+  ],
+  "trabajadores": [
+    {
+      "id": "1",
+      "usuario_id": 3,
+      "especialidad": "nutricionista",
+      "horario": "Lunes a Viernes, 9am - 5pm",
+      "pacientes_asignados": [
+        1
+      ]
+    }
+  ],
+  "citas": [
+    {
+      "id": "1",
+      "paciente_id": 1,
+      "trabajador_id": 1,
+      "fecha": "2023-10-20",
+      "hora": "10:00",
+      "duracion": 60,
+      "notas": "Consulta inicial para plan de alimentación"
+    }
+  ],
+  "planes_nutricionales": [
+    {
+      "id": "1",
+      "paciente_id": 1,
+      "trabajador_id": 1,
+      "fecha_creacion": "2023-10-15",
+      "descripcion": "Plan bajo en carbohidratos",
+      "detalles": [
+        {
+          "dia": "Lunes",
+          "comidas": [
+            {
+              "comida": "Desayuno",
+              "descripcion": "Huevos revueltos con espinacas",
+              "calorias": 250
+            },
+            {
+              "comida": "Almuerzo",
+              "descripcion": "Pescado al horno con brócoli",
+              "calorias": 400
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

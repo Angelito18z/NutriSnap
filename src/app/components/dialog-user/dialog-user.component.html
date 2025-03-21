@@ -1,0 +1,41 @@
+<h2 mat-dialog-title>{{ usuarioForm.value.id ? 'Editar Usuario' : 'Agregar Usuario' }}</h2>
+
+<mat-dialog-content>
+  <form [formGroup]="usuarioForm">
+    <!-- Nombre -->
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>Nombre</mat-label>
+      <input matInput formControlName="nombre" required>
+    </mat-form-field>
+
+    <!-- Email -->
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>Email</mat-label>
+      <input matInput formControlName="email" type="email" required>
+    </mat-form-field>
+
+    <!-- Rol -->
+    <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Rol</mat-label>
+        <mat-select formControlName="rol" required>
+          <mat-option value="administrador">Administrador</mat-option>
+          <mat-option value="trabajador">Trabajador</mat-option>
+          <mat-option value="paciente">Paciente</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+    <!-- Contraseña -->
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>Contraseña</mat-label>
+      <input matInput formControlName="contrasena" type="password" required>
+    </mat-form-field>
+
+  </form>
+</mat-dialog-content>
+
+<mat-dialog-actions>
+  <button mat-button class="cancel-button" (click)="onNoClick()">Cancelar</button>
+  <button mat-raised-button color="primary" class="confirm-button" (click)="onConfirm()" [disabled]="usuarioForm.invalid">
+    {{ usuarioForm.value.id ? 'Actualizar' : 'Agregar' }}
+  </button>
+</mat-dialog-actions>

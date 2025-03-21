@@ -6,17 +6,18 @@ import { LayoutComponent } from './layout/layout.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MaterialModule } from '../../material/material.module';
 import { UsersComponent } from './users/users.component';
-
+import { ComponentsModule } from '../../components/components.module';
 @NgModule({
   declarations: [
     LayoutComponent,
-    UsersComponent
+    UsersComponent,
   ],
   imports: [
     CommonModule,
     AdminRoutingModule,
     MatSidenavModule ,
-    MaterialModule
+    MaterialModule,
+    ComponentsModule
   ]
 })
 export class AdminModule { }

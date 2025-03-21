@@ -17,6 +17,9 @@ import { FruitCardComponent } from './fruit-card/fruit-card.component';
 
 import { SocialMediaComponent } from './social-media/social-media.component';
 import { MaterialModule } from '../material/material.module';
+import { DialogComponent } from './dialog/dialog.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { DialogUserComponent } from './dialog-user/dialog-user.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +33,10 @@ import { MaterialModule } from '../material/material.module';
     QuienesSomosComponent,
     LoadingBarComponent,
     FruitCardComponent,
-    SocialMediaComponent
+    DialogComponent,
+    LoadingBarComponent,
+    SocialMediaComponent,
+    DialogUserComponent
   ],
   imports: [
     CommonModule,
@@ -38,7 +44,8 @@ import { MaterialModule } from '../material/material.module';
     MatCardModule,
     MatButtonModule,
     MatTableModule,
-    MaterialModule
+    MaterialModule,
+    ReactiveFormsModule
   ],
   exports: [
     FormComponent,
@@ -49,8 +56,9 @@ import { MaterialModule } from '../material/material.module';
     ReviewCardComponent,
     CameraCardComponent,
     QuienesSomosComponent,
-    FruitCardComponent
-
+    FruitCardComponent,
+    DialogComponent,
+    DialogUserComponent
   ]
 })
 export class ComponentsModule { }
