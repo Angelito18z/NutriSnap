@@ -10,7 +10,7 @@ import { ComponentsModule } from './components/components.module';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatSnackBarModule } from '@angular/material/snack-bar'; 
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 @NgModule({
   declarations: [

@@ -13,6 +13,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { QuienesSomosComponent } from './quienes-somos/quienes-somos.component';
 import { MatTableModule } from '@angular/material/table';
 import { LoadingBarComponent } from './loading-bar/loading-bar.component';
+import { FruitCardComponent } from './fruit-card/fruit-card.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { LoadingBarComponent } from './loading-bar/loading-bar.component';
     ReviewCardComponent,
     CameraCardComponent,
     QuienesSomosComponent,
-    LoadingBarComponent
+    LoadingBarComponent,
+    FruitCardComponent
   ],
   imports: [
     CommonModule,
