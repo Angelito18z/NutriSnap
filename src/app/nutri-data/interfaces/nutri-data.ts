@@ -52,3 +52,14 @@ export interface Trabajador {
     pacientes_asignados: number[];
     alt_img?: string; 
 }
+
+export interface Alimento {
+    id: number;
+    nombre: string;
+    calorias: number;
+    carbohidratos: number;
+    proteinas: number;
+    grasas: number;
+    fibra: number;
+  }
+  

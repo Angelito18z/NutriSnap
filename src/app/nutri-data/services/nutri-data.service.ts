@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { environments } from '../../../environments/environments';
 import { HttpClient } from '@angular/common/http';
 import { catchError, map, Observable, of } from 'rxjs';
-import { NutriData, Usuario, Paciente, Administrador, Trabajador } from '../interfaces/nutri-data';
+import { NutriData, Usuario, Paciente, Administrador, Trabajador,Alimento  } from '../interfaces/nutri-data';
 
 @Injectable({ providedIn: 'root' })
 export class NutriDataService {
@@ -155,3 +155,35 @@ export class NutriDataService {
             );
     }
 }
+
+export class AlimentoService {
+    private baseUrl: string = environments.baseURL;
+  
+    constructor(private http: HttpClient) {}
+  
+    getAlimentos(): Observable<Alimento[]> {
+      return this.http.get<Alimento[]>(`${this.baseUrl}/alimentos`);
+    }
+  
+    getAlimentoById(id: number): Observable<Alimento | undefined> {
+      return this.http.get<Alimento>(`${this.baseUrl}/alimentos/${id}`).pipe(
+        catchError(() => of(undefined))
+      );
+    }
+  
+    addAlimento(alimento: Alimento): Observable<Alimento> {
+      return this.http.post<Alimento>(`${this.baseUrl}/alimentos`, alimento);
+    }
+  
+    updateAlimento(alimento: Alimento): Observable<Alimento> {
+      if (!alimento.id) throw Error('Alimento ID is required');
+      return this.http.patch<Alimento>(`${this.baseUrl}/alimentos/${alimento.id}`, alimento);
+    }
+  
+    deleteAlimento(id: number): Observable<boolean> {
+      return this.http.delete(`${this.baseUrl}/alimentos/${id}`).pipe(
+        catchError(() => of(false)),
+        map(() => true)
+      );
+    }
+  }
