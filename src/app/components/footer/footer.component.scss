@@ -1,52 +1,57 @@
 .footer {
-    display: flex;
-    height: 8vh; // 45% of the viewport height
-    justify-content: space-between; /* Space out the sections */
-    align-items: center; /* Vertically center the content */
-    padding: 20px; /* Add padding for spacing */
-    background-color: rgb(255, 199, 208); /* Dark green background */
-    color: #8f088a; /* White text */
-
+  display: flex;
+  height: 8vh; /* Adjust height as needed */
+  justify-content: space-between; /* Space out the sections */
+  align-items: center; /* Vertically center the content */
+  padding: 20px; /* Add padding for spacing */
+  background-color: rgb(255, 199, 208); /* Background color */
+  color: #8f088a; /* Text color */
 }
-  
-  .footer__address {
-    flex: 1; /* Take up 1/3 of the space */
-    text-align: left; /* Align text to the left */
-  }
-  
-  .footer__logo {
-    flex: 1; /* Take up 1/3 of the space */
-    text-align: center; /* Center the logo */
-  }
-  
-  .footer__logo img {
-    max-width: 100px; /* Adjust the logo size */
-    height: auto; /* Maintain aspect ratio */
-  }
-  
-  .footer__socials {
-    flex: 1; /* Take up 1/3 of the space */
-    text-align: right; /* Align social media buttons to the right */
-  }
-  
-  .main__socials {
-    display: flex;
-    gap: 10px; /* Space between social media buttons */
-    justify-content: flex-end; /* Align buttons to the right */
-  }
-  
-  .main__socials button {
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 0;
-  }
-  
-  .main__socials button svg {
-    fill: #ffffff; /* White icons */
-    transition: fill 0.3s ease; /* Smooth hover effect */
-  }
-  
-  .main__socials button:hover svg {
-    fill: #A1C181; /* Light green on hover */
-  }
+
+.footer__address,
+.footer__logo,
+.footer__socials {
+  flex: 1; /* Each section takes equal space */
+  display: flex;
+  align-items: center; /* Vertically center content */
+}
+
+.footer__address {
+  justify-content: flex-start; /* Align text to the left */
+  text-align: left; /* Ensure text alignment */
+}
+
+.footer__logo {
+  justify-content: center; /* Center the logo */
+}
+
+.footer__logo img {
+  max-width: 100px; /* Adjust the logo size */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.footer__socials {
+  justify-content: flex-end; /* Align social media buttons to the right */
+}
+
+.main__socials {
+  display: flex;
+  gap: 10px; /* Space between social media buttons */
+  justify-content: flex-end; /* Align buttons to the right */
+}
+
+.main__socials button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.main__socials button svg {
+  fill: #ffffff; /* White icons */
+  transition: fill 0.3s ease; /* Smooth hover effect */
+}
+
+.main__socials button:hover svg {
+  fill: #A1C181; /* Light green on hover */
+}
