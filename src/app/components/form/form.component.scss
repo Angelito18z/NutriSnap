@@ -1,17 +1,17 @@
 $color-primary: #fe9006; // Naranja brillante
-$color-secondary: #97c900; // Verde claro
-$color-tertiary: #fdc209; // Amarillo dorado
+$color-secondary: #ff375d; // Verde claro
+$color-tertiary: #ff375d; // Amarillo dorado
 $color-rose-dark: #ff375d; // Rosa oscuro
 $color-rose-light: #ff7090; // Rosa claro
 $color-orange: #fa6a00; // Naranja fuerte
-$color-green-bright: #bdff00; // Verde brillante
+$color-green-bright: #fe9006; // Verde brillante
 
 .container {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh; /* Ocupa toda la altura de la pantalla */
-  background-image: url('/assets/background/pattern (1).png'); 
+  background-image: url('/assets/background/bg-fruits.png'); 
   background-size: auto; /* Usa el tamaño original de la imagen */
   background-position: center; /* Centra la imagen */
   background-repeat: repeat; /* Repite la imagen */

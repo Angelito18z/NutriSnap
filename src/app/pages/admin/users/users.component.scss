@@ -1,0 +1,128 @@
+@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700);
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  line-height: 1.42em;
+  color: #4A4A4A; // Color de texto más oscuro para contraste
+  background-color: #bbd853; // Fondo claro
+}
+
+h1 {
+  font-size: 3em;
+  font-weight: 300;
+  line-height: 1em;
+  text-align: center;
+  color: #fcff61; // Rosa pastel
+}
+
+h2 {
+  font-size: 1em;
+  font-weight: 300;
+  text-align: center;
+  display: block;
+  line-height: 1em;
+  padding-bottom: 2em;
+  color: #6B5B95; // Lila pastel
+}
+
+h2 a {
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #50388d; // Lila pastel
+  text-decoration: none;
+}
+
+.blue { color: #4bb072; } // Verde pastel
+.yellow { color: #FFD700; } // Amarillo pastel
+
+.mat-elevation-z8 {
+  width: 80%;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 0 0 8em 0;
+  display: table;
+  background-color: #FFFFFF; // Fondo blanco para la tabla
+  border-radius: 10px; // Bordes redondeados
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Sombra suave
+
+  th, td {
+    padding-bottom: 2%;
+    padding-top: 2%;
+    padding-left: 2%;
+  }
+
+  th {
+    font-weight: bold;
+    font-size: 1em;
+    text-align: left;
+    color: #88B04B; // Verde pastel
+    background-color: #F5F5F5; // Fondo claro para el encabezado
+  }
+
+  td {
+    font-weight: normal;
+    font-size: 1em;
+    color: #4A4A4A; // Color de texto oscuro
+    -webkit-box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.1);
+  }
+
+  tr:nth-child(odd) {
+    background-color: #f9f9f9; // Fondo gris muy claro para filas impares
+  }
+
+  tr:nth-child(even) {
+    background-color: #FFFFFF; // Fondo blanco para filas pares
+  }
+
+  td:first-child {
+    color: #FF6F61; // Rosa pastel para la primera columna
+  }
+
+  tr:hover {
+    background-color: #eaf0a1; // Rosa muy claro al hacer hover
+    -webkit-box-shadow: 0 6px 6px -6px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 6px 6px -6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 6px 6px -6px rgba(0, 0, 0, 0.1);
+  }
+
+  td:hover {
+    background-color: #FFFACD; // Amarillo pastel al hacer hover
+    color: #4A4A4A; // Texto oscuro para contraste
+    font-weight: bold;
+    box-shadow: #FFD700 -1px 1px, #FFD700 -2px 2px, #FFD700 -3px 3px, #FFD700 -4px 4px, #FFD700 -5px 5px, #FFD700 -6px 6px;
+    transform: translate3d(6px, -6px, 0);
+    transition-delay: 0s;
+    transition-duration: 0.4s;
+    transition-property: all;
+    transition-timing-function: ease;
+  }
+}
+
+@media (max-width: 800px) {
+  .mat-elevation-z8 {
+    td:nth-child(4),
+    th:nth-child(4) {
+      display: none;
+    }
+  }
+}
+
+.button-add {
+  margin: 20px;
+  color: #fc0dc8; // Verde pastel
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    color: #cc50c2; // Lila pastel al hacer hover
+  }
+}
+
+.mat-icon {
+  color: #4bb072; // Verde pastel
+}
