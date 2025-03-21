@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { Usuario } from '../../nutri-data/interfaces/nutri-data';
 
 @Injectable({
   providedIn: 'root'
@@ -24,5 +25,14 @@ export class UsersService {
     deleteUsuario(id: number):Observable<any>{
       return this.http.delete(`${this.apiUrl}/${id}`);
     } 
+
+    addUsuario(user: Usuario):Observable<Usuario>{
+      return this.http.post<Usuario>(`${this.apiUrl}/usuarios/${user.id}`,user);
+  }
+
+  updateUsuario (user:Usuario):Observable<Usuario>{
+    if(!user.id) throw Error('User is required');
+    return this.http.patch<Usuario>(`${this.apiUrl}/usuario/${user.id}`, user);
+}
   
 }

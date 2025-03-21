@@ -44,15 +44,6 @@
       "contraseña": "hashed_password_654",
       "fecha_registro": "2023-06-05",
       "ultimo_acceso": "2023-10-11"
-    },
-    {
-      "id": "6",
-      "nombre": "Laura Fernández",
-      "email": "laura.fernandez@gmail.com",
-      "rol": "paciente",
-      "contraseña": "hashed_password_987",
-      "fecha_registro": "2023-05-12",
-      "ultimo_acceso": "2023-10-10"
     }
   ],
   "pacientes": [

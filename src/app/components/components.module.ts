@@ -14,6 +14,8 @@ import { QuienesSomosComponent } from './quienes-somos/quienes-somos.component';
 import { MatTableModule } from '@angular/material/table';
 import { LoadingBarComponent } from './loading-bar/loading-bar.component';
 import { MaterialModule } from '../material/material.module';
+import { DialogComponent } from './dialog/dialog.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,8 @@ import { MaterialModule } from '../material/material.module';
     ReviewCardComponent,
     CameraCardComponent,
     QuienesSomosComponent,
-    LoadingBarComponent
+    LoadingBarComponent,
+    DialogComponent,
   ],
   imports: [
     CommonModule,
@@ -33,7 +36,8 @@ import { MaterialModule } from '../material/material.module';
     MatCardModule,
     MatButtonModule,
     MatTableModule,
-    MaterialModule
+    MaterialModule,
+    ReactiveFormsModule
   ],
   exports: [
     FormComponent,
@@ -43,7 +47,8 @@ import { MaterialModule } from '../material/material.module';
     TableContentsComponent,
     ReviewCardComponent,
     CameraCardComponent,
-    QuienesSomosComponent
+    QuienesSomosComponent,
+    DialogComponent,
 
   ]
 })
