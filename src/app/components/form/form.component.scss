@@ -1,33 +1,66 @@
+$color-primary: #fe9006; // Naranja brillante
+$color-secondary: #ff375d; // Verde claro
+$color-tertiary: #ff375d; // Amarillo dorado
+$color-rose-dark: #ff375d; // Rosa oscuro
+$color-rose-light: #ff7090; // Rosa claro
+$color-orange: #fa6a00; // Naranja fuerte
+$color-green-bright: #fe9006; // Verde brillante
+
 .container {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh; /* Ocupa toda la altura de la pantalla */
-  background-image: url('/assets/background/bg.png'); 
+  background-image: url('/assets/background/bg-fruits.png'); 
   background-size: auto; /* Usa el tamaño original de la imagen */
   background-position: center; /* Centra la imagen */
   background-repeat: repeat; /* Repite la imagen */
 }
-
 
 .form_area {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: #E3F2D0; /* Verde claro */
+  background-color: #ffffff; /* Fondo blanco */
   height: auto;
   width: auto;
-  border: 2px solid #2E572C; /* Verde oscuro */
+  padding: 20px;
+  border: 2px solid $color-secondary; /* Verde claro */
   border-radius: 20px;
-  box-shadow: 3px 4px 0px 1px #A1C181; /* Verde medio */
+  box-shadow: 3px 4px 0px 1px $color-tertiary; /* Amarillo dorado */
+}
+
+.header {
+  display: flex;
+  align-items: center; /* Alinea verticalmente la flecha y el título */
+  gap: 10px; /* Espacio entre la flecha y el título */
+  margin-bottom: 20px; /* Espacio debajo del header */
+  padding-right:70px;
+}
+
+.header button {
+  padding: 0; /* Elimina el padding por defecto del botón */
+  background: none; /* Fondo transparente */
+  border: none; /* Sin bordes */
+  cursor: pointer;
+  display: flex;
+  align-items: center; /* Centra el ícono verticalmente */
+}
+
+.large-icon {
+  font-size: 40px; /* Ajusta el tamaño del ícono */
+}
+
+.header button mat-icon {
+  color: $color-rose-dark; /* Rosa oscuro para el ícono */
+  font-size: 24px; /* Tamaño del ícono */
 }
 
 .title {
-  color: #2E572C; /* Verde oscuro */
+  margin: 0; /* Elimina el margen por defecto del párrafo */
   font-weight: 900;
   font-size: 1.5em;
-  margin-top: 20px;
 }
 
 .sub_title {
@@ -44,17 +77,19 @@
 
 .form_style {
   outline: none;
-  border: 2px solid #2E572C;
-  box-shadow: 3px 4px 0px 1px #A1C181;
+  border: 2px solid $color-primary; /* Naranja brillante */
+  box-shadow: 3px 4px 0px 1px $color-tertiary; /* Amarillo dorado */
   width: 290px;
   padding: 12px 10px;
   border-radius: 4px;
   font-size: 15px;
+  color: $color-orange; /* Naranja fuerte */
 }
 
 .form_style:focus, .btn:focus {
   transform: translateY(4px);
-  box-shadow: 1px 2px 0px 0px #A1C181;
+  box-shadow: 1px 2px 0px 0px $color-tertiary; /* Amarillo dorado */
+  border-color: $color-primary; /* Naranja brillante */
 }
 
 .btn {
@@ -62,33 +97,42 @@
   margin: 25px 0px;
   width: 290px;
   font-size: 15px;
-  background: #4F8A5F; /* Verde principal */
+  background: $color-primary; /* Naranja brillante */
+  color: #ffffff; /* Texto blanco */
   border-radius: 10px;
   font-weight: 800;
-  box-shadow: 3px 3px 0px 0px #E3F2D0; /* Verde claro */
+  box-shadow: 3px 3px 0px 0px $color-tertiary; /* Amarillo dorado */
+  border: none;
+  cursor: pointer;
 }
 
 .btn:hover {
   opacity: .9;
+  background: $color-rose-light; /* Rosa claro */
 }
 
 .link {
   font-weight: 800;
-  color: #2E572C;
+  color: $color-secondary; /* Verde claro */
   padding: 5px;
+  text-decoration: none;
+}
+
+.link:hover {
+  color: $color-green-bright; /* Verde brillante */
 }
 
 ::ng-deep .success-snackbar {
-  background-color: #4caf50 !important;
+  background-color: $color-secondary !important; /* Verde claro */
   color: white !important;
 }
 
 ::ng-deep .error-snackbar {
-  background-color: #f44336 !important;
+  background-color: $color-rose-dark !important; /* Rosa oscuro */
   color: white !important;
 }
 
 ::ng-deep .warning-snackbar {
-  background-color: #ff9800 !important;
-  color: white !important;
+  background-color: $color-tertiary !important; /* Amarillo dorado */
+  color: black !important; /* Texto negro para mejor contraste */
 }
