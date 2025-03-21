@@ -4,7 +4,6 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatCardModule } from '@angular/material/card';
 import { FormComponent } from './form/form.component';
 import { FooterComponent } from './footer/footer.component';
-import { FoodCardComponent } from './food-card/food-card.component';
 import { TableContentsComponent } from './table-contents/table-contents.component';
 import { ReviewCardComponent } from './review-card/review-card.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -26,7 +25,6 @@ import { DialogUserComponent } from './dialog-user/dialog-user.component';
     FormComponent,
     NavbarComponent,
     FooterComponent,
-    FoodCardComponent,
     TableContentsComponent,
     ReviewCardComponent,
     CameraCardComponent,
@@ -51,7 +49,6 @@ import { DialogUserComponent } from './dialog-user/dialog-user.component';
     FormComponent,
     NavbarComponent,
     FooterComponent,
-    FoodCardComponent,
     TableContentsComponent,
     ReviewCardComponent,
     CameraCardComponent,
