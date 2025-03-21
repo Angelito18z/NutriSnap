@@ -1,50 +1,64 @@
 .loading-bar-container {
-    width: 100%;
-  
-    .loading-bar {
-      width: 100%;
-      height: 20px;
-      background-color: #f0f0f0;
-      border-radius: 10px;
-      overflow: hidden;
-      display: flex;
-      margin-bottom: 10px;
-  
-      .bar {
-        height: 100%;
-        transition: width 0.5s ease;
-  
-        &.calories {
-          background-color: #ff6b6b; // Red for calories
-        }
-  
-        &.protein {
-          background-color: #4ecdc4; // Teal for protein
-        }
-  
-        &.carbs {
-          background-color: #ffe66d; // Yellow for carbs
-        }
-  
-        &.fat {
-          background-color: #ff9f1c; // Orange for fat
-        }
+  margin-top: 20px;
+
+  .combined-bar {
+    display: flex;
+    height: 20px;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+
+    .bar {
+      height: 100%;
+      &.calories {
+        background-color: #ff6f61; // Red for calories
+      }
+      &.protein {
+        background-color: #4caf50; // Green for protein
+      }
+      &.carbs {
+        background-color: #ffc107; // Yellow for carbs
+      }
+      &.fat {
+        background-color: #2196f3; // Blue for fat
       }
     }
-  
-    .separate-bars {
-      .bar-container {
-        margin-bottom: 10px;
-  
-        .label {
-          display: block;
-          font-weight: bold;
-          margin-bottom: 5px;
-        }
-  
-        .loading-bar {
-          height: 15px; // Smaller height for separate bars
+  }
+
+  .separate-bars {
+    margin-top: 20px;
+
+    .bar-container {
+      margin-bottom: 10px;
+
+      .label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+      }
+
+      .loading-bar {
+        height: 10px;
+        background-color: #e0e0e0;
+        border-radius: 5px;
+        overflow: hidden;
+
+        .bar {
+          height: 100%;
+          &.calories {
+            background-color: #ff6f61; // Red for calories
+          }
+          &.protein {
+            background-color: #4caf50; // Green for protein
+          }
+          &.carbs {
+            background-color: #ffc107; // Yellow for carbs
+          }
+          &.fat {
+            background-color: #2196f3; // Blue for fat
+          }
         }
       }
     }
   }
+}

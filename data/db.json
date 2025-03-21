@@ -166,12 +166,12 @@
   ],
   "productos": [
     {
-      "id": "1",
+      "id": "4218381936232",
       "nombre": "Manzana",
       "calorias": 52,
-      "proteinas": 0.3,
-      "azucares": 10.4,
-      "grasas": 0.2
+      "proteinas": 23.3,
+      "carbohidratos": 34.4,
+      "grasas": 12.2
     },
     {
       "id": "2",

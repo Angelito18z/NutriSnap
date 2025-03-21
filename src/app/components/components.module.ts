@@ -21,6 +21,7 @@ import { DialogComponent } from './dialog/dialog.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { DialogUserComponent } from './dialog-user/dialog-user.component';
 import { DialogQuoteComponent } from './dialog-quote/dialog-quote.component';
+import { ZXingScannerModule } from '@zxing/ngx-scanner';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import { DialogQuoteComponent } from './dialog-quote/dialog-quote.component';
     MatButtonModule,
     MatTableModule,
     MaterialModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ZXingScannerModule
   ],
   exports: [
     FormComponent,

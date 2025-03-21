@@ -1,70 +1,75 @@
 <div style="background-color: #FFE5B4;">
-  <!-- Centered and Bigger Title -->
   <div class="banner-title">
-    Has una prueba
+    Haz una prueba
   </div>
 
   <div class="three-column-banner">
-    <!-- First Column: Robot Image (1/4 width) -->
+    <!-- Columna 1: Imagen Robot -->
     <div class="column robot-column">
       <img src="/assets/robot/happy robot.png" alt="Robot" class="robot-image" />
     </div>
 
-    <!-- Second Column: Nutrient Card (50% width) -->
+    <!-- Columna 2: Valores Nutricionales -->
     <div class="column nutrient-column">
       <mat-card class="nutrition-card">
         <mat-card-header>
-          <mat-card-title>Nutritional Values</mat-card-title>
+          <mat-card-title>Valores Nutricionales</mat-card-title>
         </mat-card-header>
         <mat-card-content>
-          <div class="nutrition-content">
-            <!-- Left Side: Numeric Values -->
-            <div class="numeric-values">
-              <div class="nutrition-item">
-                <span class="label">Calories:</span>
-                <span class="value">{{ nutritionData.calories }} kcal</span>
-              </div>
-              <div class="nutrition-item">
-                <span class="label">Proteina:</span>
-                <span class="value">{{ nutritionData.protein }} g</span>
-              </div>
-              <div class="nutrition-item">
-                <span class="label">Azucares:</span>
-                <span class="value">{{ nutritionData.carbs }} g</span>
-              </div>
-              <div class="nutrition-item">
-                <span class="label">Grasas:</span>
-                <span class="value">{{ nutritionData.fat }} g</span>
-              </div>
+          <div *ngIf="nutritionData; else noData">
+            <div class="nutrition-item">
+              <span class="label">Nombre:</span>
+              <span class="value">{{ nutritionData.nombre }}</span>
             </div>
-      
-            <!-- Right Side: Visual Representations -->
-            <div class="visual-values">
-              <app-loading-bar
-                [calories]="nutritionData.calories"
-                [protein]="nutritionData.protein"
-                [carbs]="nutritionData.carbs"
-                [fat]="nutritionData.fat">
-              </app-loading-bar>
+            <div class="nutrition-item">
+              <span class="label">Calorías:</span>
+              <span class="value">{{ nutritionData.calorias }} kcal</span>
+            </div>
+            <div class="nutrition-item">
+              <span class="label">Proteínas:</span>
+              <span class="value">{{ nutritionData.proteinas }} g</span>
+            </div>
+            <div class="nutrition-item">
+              <span class="label">Azúcares:</span>
+              <span class="value">{{ nutritionData.carbohidratos }} g</span>
+            </div>
+            <div class="nutrition-item">
+              <span class="label">Grasas:</span>
+              <span class="value">{{ nutritionData.grasas }} g</span>
             </div>
           </div>
+          <ng-template #noData>
+            <p>Escanea un producto para ver sus valores nutricionales.</p>
+          </ng-template>
         </mat-card-content>
-      </mat-card>
+        <app-loading-bar 
+        [calories]="nutritionData?.calorias || 0"
+        [protein]="nutritionData?.proteinas || 0"
+        [carbs]="nutritionData?.carbohidratos || 0"
+        [fat]="nutritionData?.grasas || 0">
+      </app-loading-bar>
+            </mat-card>
     </div>
 
-    <!-- Third Column: Camera Card (1/4 width) -->
+    <!-- Columna 3: Cámara y Escáner -->
     <div class="column camera-column">
       <mat-card class="camera-card">
         <mat-card-header>
-          <mat-card-title>Escane su producto</mat-card-title>
+          <mat-card-title>Escanea tu producto</mat-card-title>
         </mat-card-header>
         <mat-card-content>
-          <div class="camera-container" #cameraContainer>
-            <video #cameraFeed autoplay></video>
+          <zxing-scanner
+            [formats]="supportedFormats"
+            [tryHarder]="true"
+            (scanSuccess)="onCodeResult($event)"
+            (scanFailure)="onScanFailure($event)"
+            (scanError)="onScanError($event)">
+          </zxing-scanner>
+          <div>
+            <button mat-raised-button color="primary" (click)="activateCamera()">
+              {{ isCameraActive ? 'Desactivar Cámara' : 'Activar Cámara' }}
+            </button>
           </div>
-          <button mat-raised-button color="primary" (click)="activateCamera()">
-            {{ isCameraActive ? 'Deactivate Camera' : 'Activate Camera' }}
-          </button>
         </mat-card-content>
       </mat-card>
     </div>
