@@ -10,9 +10,14 @@ const routes: Routes = [
     path: 'landing',
     loadChildren: () => import('./pages/landing/landing.module').then(m => m.LandingModule),
   },
+
+  {
+    path: 'admin',
+    loadChildren: () => import('./pages/admin/admin.module').then(m => m.AdminModule),
+  },
   {
     path: '', //Ruta padre(inicial) para cualquier otra ruta
-    redirectTo: '/auth/login', //Redirecciona a la ruta login
+    redirectTo: '/landing', //Redirecciona a la ruta login
     pathMatch: 'full', //Solo se redirecciona si la ruta es exactamente vacia
   },
   { path: 'nutriData', loadChildren: () => import('./nutri-data/nutri-data.module').then(m => m.NutriDataModule) },

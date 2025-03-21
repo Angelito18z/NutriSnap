@@ -15,6 +15,9 @@ import { MatTableModule } from '@angular/material/table';
 import { LoadingBarComponent } from './loading-bar/loading-bar.component';
 import { FruitCardComponent } from './fruit-card/fruit-card.component';
 
+import { SocialMediaComponent } from './social-media/social-media.component';
+import { MaterialModule } from '../material/material.module';
+
 @NgModule({
   declarations: [
     FormComponent,
@@ -26,7 +29,8 @@ import { FruitCardComponent } from './fruit-card/fruit-card.component';
     CameraCardComponent,
     QuienesSomosComponent,
     LoadingBarComponent,
-    FruitCardComponent
+    FruitCardComponent,
+    SocialMediaComponent
   ],
   imports: [
     CommonModule,
@@ -34,6 +38,7 @@ import { FruitCardComponent } from './fruit-card/fruit-card.component';
     MatCardModule,
     MatButtonModule,
     MatTableModule,
+    MaterialModule
   ],
   exports: [
     FormComponent,

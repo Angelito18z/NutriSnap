@@ -2,17 +2,19 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LandingRoutingModule } from './landing-routing.module';
 import { ComponentsModule } from '../../components/components.module';
-import { HeroeComponent } from './heroe/heroe.component';
+import { HeroeComponents } from './heroe/heroe.component';
+import { NutriDataModule } from '../../nutri-data/nutri-data.module';
 
 
 @NgModule({
   declarations: [
-    HeroeComponent
+    HeroeComponents
   ],
   imports: [
     CommonModule,
     LandingRoutingModule,
     ComponentsModule,
+    NutriDataModule
     
   ]
 })

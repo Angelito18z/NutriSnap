@@ -1,0 +1,19 @@
+.main-container {
+    margin-left: 200px; /* Add left margin */
+    margin-right: 200px; /* Add right margin */
+
+    
+  }
+.bg {
+    background-image: url('/assets/background/fruit-pattern.png'); 
+
+    background-size: auto; /* Usa el tamaño original de la imagen */
+    background-position: center; /* Centra la imagen */
+    background-repeat: repeat; /* Repite la imagen */
+}
+@media (max-width: 768px) {
+    .main-container {
+      margin-left: 5px;
+      margin-right: 5px;
+    }
+  }
