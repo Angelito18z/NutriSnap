@@ -1,10 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-
+import { AuthGuard } from './guards/auth.guard';
+import{NoAuthGuard} from './guards/noauth.guard'
 const routes: Routes = [
   {
     path: 'auth', //Ruta padre para autenticacion
     loadChildren: () => import('./pages/auth/auth.module').then(m => m.AuthModule),
+    canActivate: [NoAuthGuard], // Bloquea el acceso si ya está autenticado
+    canMatch: [NoAuthGuard],
   },
   {
     path: 'landing',
@@ -14,6 +17,8 @@ const routes: Routes = [
   {
     path: 'admin',
     loadChildren: () => import('./pages/admin/admin.module').then(m => m.AdminModule),
+    canActivate:[AuthGuard],
+    canMatch:[AuthGuard],
   },
   {
     path: '', //Ruta padre(inicial) para cualquier otra ruta
