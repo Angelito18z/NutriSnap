@@ -48,7 +48,8 @@ import { MaterialModule } from '../material/material.module';
     TableContentsComponent,
     ReviewCardComponent,
     CameraCardComponent,
-    QuienesSomosComponent
+    QuienesSomosComponent,
+    FruitCardComponent
 
   ]
 })
