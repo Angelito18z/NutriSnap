@@ -7,8 +7,8 @@
   
     <!-- Right Section: Navigation Links -->
     <div class="right-section">
-        <a mat-button routerLink="/landing/heroe" class="mat-body-2">Home</a>
-        <a mat-button (click)="register()" class="mat-body-2">Register</a>
-        <a mat-button (click)="login()" class="mat-body-2">Login</a>
+        <a mat-button routerLink="/landing/heroe" class="mat-body-2">Inicio</a>      
+        <a *ngIf="!isAuthenticated" mat-button (click)="login()" class="mat-body-2">Iniciar Sesión</a>
+        <a *ngIf="isAuthenticated" mat-button (click)="logout()" class="mat-body-2">Cerrar Sesión</a>
     </div>
   </mat-toolbar>
