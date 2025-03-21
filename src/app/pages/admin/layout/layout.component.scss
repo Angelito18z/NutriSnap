@@ -1,0 +1,20 @@
+/* Asegúrate de que la clase "spacer" empuje los elementos hacia los extremos */
+.spacer {
+    flex: 1;
+  }
+  
+  /* Si quieres agregar más estilos al botón de 'Salir' */
+  .button-exit {
+    margin-left: auto; /* Esto empuja el botón a la derecha */
+    background-color: #ff4c4c; /* Rojo brillante como color de fondo */
+    color: white; /* Blanco para el texto */
+    border-radius: 4px; /* Redondear bordes */
+    padding: 8px 16px; /* Ajuste de padding */
+    border: none; /* Eliminar borde predeterminado */
+  }
+  
+  /* Al pasar el ratón, cambia el color */
+  .button-exit:hover {
+    background-color: #e03e3e; /* Color más oscuro para el hover */
+  }
+  
