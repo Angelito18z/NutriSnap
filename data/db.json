@@ -1,47 +1,6 @@
 {
   "usuarios": [
     {
-      "id": "2",
-      "nombre": "Ana Gómez perez",
-      "email": "ana.gomez@gmail.com",
-      "rol": "administrador",
-      "contrasena": "hashed_password_456",
-      "fecha_registro": "2023-09-15",
-      "ultimo_acceso": "2023-10-14"
-    },
-    {
-      "id": "3",
-      "nombre": "Carlos Ruiz",
-      "email": "carlos.ruiz@gmail.com",
-      "rol": "trabajador",
-      "contrasena": "hashed_password_789",
-      "fecha_registro": "2023-08-20",
-      "ultimo_acceso": "2023-10-13"
-    },
-    {
-      "id": "4",
-      "nombre": "María López",
-      "email": "maria.lopez@gmail.com",
-      "rol": "paciente",
-      "contrasena": "hashed_password_321",
-      "fecha_registro": "2023-07-10",
-      "ultimo_acceso": "2023-10-12"
-    },
-    {
-      "id": "6e68",
-      "nombre": "Jose Manuel",
-      "email": "pepe@gmail.com",
-      "rol": "admin",
-      "contrasena": "pepecontraseña"
-    },
-    {
-      "id": "8808",
-      "nombre": "Perla Luna",
-      "email": "perla@gmail.com",
-      "rol": "trabajador",
-      "contrasena": "1234567890987654321|1234567890"
-    },
-    {
       "id": "1742543711395",
       "nombre": "José Angel López Rivera",
       "email": "angel@gmail.com",
@@ -52,12 +11,39 @@
     },
     {
       "id": "1742543757556",
-      "nombre": "Christian",
+      "nombre": "Christian Barragán Páez",
       "email": "christian@gmai.com",
       "rol": "usuario",
       "contrasena": "123456789",
       "fecha_registro": "2025-03-21T07:55:56.716Z",
       "ultimo_acceso": "2025-03-21T07:55:56.716Z"
+    },
+    {
+      "id": "1742563944165",
+      "nombre": "Perla Luna",
+      "email": "perla@gmail.com",
+      "rol": "paciente",
+      "contrasena": "potrero",
+      "fecha_registro": "2025-03-21T13:32:23.237Z",
+      "ultimo_acceso": "2025-03-21T13:32:23.238Z"
+    },
+    {
+      "id": "1742564140827",
+      "nombre": "Jose Manuel Lara Villalobos",
+      "email": "pepe@gmail.com",
+      "rol": "trabajador",
+      "contrasena": "pepe123",
+      "fecha_registro": "2025-03-21T13:35:40.298Z",
+      "ultimo_acceso": "2025-03-21T13:35:40.298Z"
+    },
+    {
+      "id": "1742564384119",
+      "nombre": "Cesar Mundo Gonzalez",
+      "email": "mundo@gmail.com",
+      "rol": "administrador",
+      "contrasena": "mundote",
+      "fecha_registro": "2025-03-21T13:39:43.181Z",
+      "ultimo_acceso": "2025-03-21T13:39:43.181Z"
     }
   ],
   "pacientes": [

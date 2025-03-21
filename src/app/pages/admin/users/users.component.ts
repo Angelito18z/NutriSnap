@@ -143,37 +143,47 @@ actualizarUsuario(usuario: Usuario): void {
         break;
     }
   }
-
-    openAgregarUsuarioDialog(): void {
-      const dialogRef = this.dialog.open(DialogUserComponent, {
-        width: '500px',
-      });
+  openAgregarUsuarioDialog(): void {
+    const dialogRef = this.dialog.open(DialogUserComponent, {
+      width: '500px',
+    });
   
-      dialogRef.afterClosed().subscribe((result: Usuario) => {
-        if (result) {
-          console.log('Usuario a agregar:', result);
-          this.agregarUsuario(result); // Llama al método para agregar el usuario
-        }
-      });
-    }
-
-    
-      agregarUsuario(usuario: Usuario): void {
-        this.usuarioService.addUsuario(usuario).subscribe({
-          next: (response) => {
-            this.mostrarDialog(
-              'Usuario agregado con exito ',
-              `Se agregó a ${usuario.nombre} satisfactoriamente`,
-              null
-            );
-            this.getUsuarios()
-          },
-          error: (error) => {
-            this.mostrarDialog(
-              'Error al agregar al usuario',
-              `Hubo un error al agregar al usuario ${usuario.nombre}`,
-              null
-            );   },
-        });
+    dialogRef.afterClosed().subscribe((result: Usuario) => {
+      if (result) {
+        // Generar el ID único antes de agregar el usuario
+        const nuevoUsuario: Usuario = {
+          id: (Date.now() + Math.floor(Math.random() * 1000)).toString(), // Genera un ID único
+          nombre: result.nombre,
+          email: result.email,
+          rol: result.rol || 'usuario', // Asigna un rol por defecto si no se proporciona
+          contrasena: result.contrasena,
+          fecha_registro: new Date().toISOString(),
+          ultimo_acceso: new Date().toISOString(),
+        };
+  
+        console.log('Usuario a agregar:', nuevoUsuario);
+        this.agregarUsuario(nuevoUsuario); // Llama al método para agregar el usuario
       }
+    });
+  }
+  
+  agregarUsuario(usuario: Usuario): void {
+    this.usuarioService.addUsuario(usuario).subscribe({
+      next: (response) => {
+        this.mostrarDialog(
+          'Usuario agregado con éxito',
+          `Se agregó a ${usuario.nombre} satisfactoriamente`,
+          null
+        );
+        this.getUsuarios();
+      },
+      error: (error) => {
+        this.mostrarDialog(
+          'Error al agregar al usuario',
+          `Hubo un error al agregar al usuario ${usuario.nombre}`,
+          null
+        );
+      },
+    });
+  }
 }
