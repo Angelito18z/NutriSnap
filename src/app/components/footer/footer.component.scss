@@ -1,43 +1,138 @@
 .footer {
-  display: flex;
-  height: 8vh; /* Adjust height as needed */
-  justify-content: space-between; /* Space out the sections */
-  align-items: center; /* Vertically center the content */
-  padding: 20px; /* Add padding for spacing */
-  background-color: rgb(255, 199, 208); /* Background color */
-  color: #8f088a; /* Text color */
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1.5fr 1fr; /* Distribución para las 4 secciones */
+  gap: 24px;
+  min-height: 10vh; /* Ligeramente más alto para mejor distribución */
+  padding: 25px 20px;
+  background-color: rgb(255, 199, 208);
+  color: #8f088a;
+  align-items: start;
 }
 
 .footer__address,
 .footer__logo,
+.footer__contact,
 .footer__socials {
-  flex: 1; /* Each section takes equal space */
   display: flex;
-  align-items: center; /* Vertically center content */
+  flex-direction: column;
 }
 
 .footer__address {
-  justify-content: flex-start; /* Align text to the left */
-  text-align: left; /* Ensure text alignment */
+  justify-content: flex-start;
+  text-align: left;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  max-width: 250px;
 }
 
 .footer__logo {
-  justify-content: center; /* Center the logo */
+  justify-content: center;
+  align-items: center;
 }
 
 .footer__logo img {
-  max-width: 100px; /* Adjust the logo size */
-  height: auto; /* Maintain aspect ratio */
+  max-width: 110px;
+  height: auto;
+}
+
+/* Estilos para el formulario de contacto */
+.footer__contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco con ligera transparencia */
+  padding: 20px;
+  border-radius: 12px; /* Bordes redondeados */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  width: 100%;
+  max-width: 400px;
+  margin: auto;
+}
+
+.footer__contact h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #8f088a;
+  font-weight: 600;
+}
+
+.footer-form {
+  width: 100%;
+}
+
+.footer-form fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-form .form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.footer-form label {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #8f088a;
+  margin-bottom: 5px;
+}
+
+.footer-form input,
+.footer-form textarea {
+  width: 100%;
+  padding: 8px 12px;
+  background-color: white;
+  border: 1px solid rgba(143, 8, 138, 0.3);
+  border-radius: 8px; /* Bordes más redondeados */
+  color: #8f088a;
+  font-size: 0.9rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.footer-form input:focus,
+.footer-form textarea:focus {
+  outline: none;
+  border-color: #8f088a;
+  box-shadow: 0 0 6px rgba(143, 8, 138, 0.3);
+}
+
+.footer-form textarea {
+  resize: vertical;
+  min-height: 50px;
+  max-height: 120px;
+}
+
+.footer-submit-btn {
+  background-color: #8f088a;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  text-align: center;
+}
+
+.footer-submit-btn:hover {
+  background-color: #a30a9d;
+  transform: translateY(-2px);
 }
 
 .footer__socials {
-  justify-content: flex-end; /* Align social media buttons to the right */
+  justify-content: flex-end;
+  align-items: center;
 }
 
+/* Estilos para los botones de redes sociales */
 .main__socials {
   display: flex;
-  gap: 10px; /* Space between social media buttons */
-  justify-content: flex-end; /* Align buttons to the right */
+  gap: 12px;
+  justify-content: flex-end;
 }
 
 .main__socials button {
@@ -48,10 +143,83 @@
 }
 
 .main__socials button svg {
-  fill: #ffffff; /* White icons */
-  transition: fill 0.3s ease; /* Smooth hover effect */
+  fill: #ffffff;
+  transition: fill 0.3s ease-in-out;
 }
 
 .main__socials button:hover svg {
-  fill: #A1C181; /* Light green on hover */
+  fill: #A1C181;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .footer {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "address logo"
+      "contact socials";
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .footer__address {
+    grid-area: address;
+  }
+
+  .footer__logo {
+    grid-area: logo;
+  }
+
+  .footer__contact {
+    grid-area: contact;
+    padding-top: 12px;
+  }
+
+  .footer__socials {
+    grid-area: socials;
+    justify-content: flex-start;
+    padding-top: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "logo"
+      "address"
+      "contact"
+      "socials";
+    text-align: center;
+    padding: 25px 15px;
+  }
+
+  .footer__address {
+    justify-content: center;
+    text-align: center;
+    padding-top: 15px;
+    max-width: 100%;
+  }
+
+  .footer__contact {
+    align-items: center;
+  }
+
+  .footer-form {
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  .footer-submit-btn {
+    align-self: center;
+  }
+
+  .footer__socials {
+    justify-content: center;
+    padding-top: 15px;
+  }
+
+  .main__socials {
+    justify-content: center;
+  }
 }

@@ -10,8 +10,35 @@
 
   <!-- Middle: Logo -->
   <div class="footer__logo">
-    <img src="/assets/logo/logo.png" alt="Logo" class="logo" />
+    <img src="/assets/robot/chill robot.png" alt="Middle Image" class="middle-image" />
   </div>
+
+ <!-- Contact Form -->
+<div class="footer__contact">
+  <h3>Contáctanos</h3>
+  <form class="footer-form" action="#" method="POST">
+    <fieldset>
+
+      <div class="form-group">
+        <label for="footer-name">Nombre</label>
+        <input type="text" id="footer-name" name="name" placeholder="Tu nombre" required aria-label="Nombre">
+      </div>
+
+      <div class="form-group">
+        <label for="footer-email">Correo electrónico</label>
+        <input type="email" id="footer-email" name="email" placeholder="Tu correo electrónico" required aria-label="Correo electrónico">
+      </div>
+
+      <div class="form-group">
+        <label for="footer-message">Mensaje</label>
+        <textarea id="footer-message" name="message" placeholder="Escribe tu mensaje aquí..." rows="3" required aria-label="Mensaje"></textarea>
+      </div>
+
+      <button type="submit" class="footer-submit-btn">Enviar</button>
+    </fieldset>
+  </form>
+</div>
+
 
   <!-- Right Side: Social Media Buttons -->
   <div class="footer__socials">
