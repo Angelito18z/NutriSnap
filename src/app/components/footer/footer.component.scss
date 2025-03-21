@@ -1,57 +1,67 @@
 .footer {
-  display: flex;
-  height: 8vh; /* Adjust height as needed */
-  justify-content: space-between; /* Space out the sections */
-  align-items: center; /* Vertically center the content */
-  padding: 20px; /* Add padding for spacing */
-  background-color: rgb(255, 199, 208); /* Background color */
-  color: #8f088a; /* Text color */
+  display: grid;
+  grid-template-columns: 1fr auto 1fr; /* Three columns on large screens */
+  height: auto; /* Adjust height dynamically */
+  align-items: center;
+  padding: 20px;
+  background-color: rgb(255, 199, 208);
+  color: #8f088a;
+  gap: 20px; /* Space between items */
 }
 
+/* Ensure each section is properly aligned */
 .footer__address,
 .footer__logo,
 .footer__socials {
-  flex: 1; /* Each section takes equal space */
   display: flex;
-  align-items: center; /* Vertically center content */
+  align-items: center;
 }
 
+/* Address aligned left */
 .footer__address {
-  justify-content: flex-start; /* Align text to the left */
-  text-align: left; /* Ensure text alignment */
+  justify-content: flex-start;
+  text-align: left;
 }
 
+/* Center the logo */
 .footer__logo {
-  justify-content: center; /* Center the logo */
+  justify-content: center;
 }
 
 .footer__logo img {
-  max-width: 100px; /* Adjust the logo size */
-  height: auto; /* Maintain aspect ratio */
+  max-width: 100px;
+  height: auto;
 }
 
+/* Socials aligned right */
 .footer__socials {
-  justify-content: flex-end; /* Align social media buttons to the right */
+  justify-content: flex-end;
 }
 
-.main__socials {
-  display: flex;
-  gap: 10px; /* Space between social media buttons */
-  justify-content: flex-end; /* Align buttons to the right */
-}
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer {
+    grid-template-columns: 1fr; /* Stack into a single column */
+    text-align: center; /* Center everything */
+    justify-content: center;
+  }
 
-.main__socials button {
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 0;
-}
+  .footer__address,
+  .footer__logo,
+  .footer__socials {
+    justify-content: center; /* Center items in smaller screens */
+    text-align: center;
+  }
 
-.main__socials button svg {
-  fill: #ffffff; /* White icons */
-  transition: fill 0.3s ease; /* Smooth hover effect */
-}
+  .footer__address {
+    order: 1; /* Address at the top */
+  }
 
-.main__socials button:hover svg {
-  fill: #A1C181; /* Light green on hover */
+  .footer__logo {
+    order: 2; /* Logo in the middle */
+  }
+
+  .footer__socials {
+    order: 3; /* Socials at the bottom */
+  }
 }
